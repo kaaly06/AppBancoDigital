@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppBancoDigital
+using AppBancoDigital.Model;
+using AppBancoDigital.View;
+
+namespace AppBancoDigital.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class LoginCorrentista : ContentPage
     {
-        public MainPage()
+        public LoginCorrentista()
         {
             InitializeComponent();
         }

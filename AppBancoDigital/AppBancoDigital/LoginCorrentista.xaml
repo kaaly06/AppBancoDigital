@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.LoginCorrentista"
+               Background="#801637">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+               <!--logo--> <Label Text="inter" 
+                   TextColor="#fff"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Start"
+                   Margin="10,10,10,10"/>
+
+                <Label Text="Bem-Vindo(a)"
+                       Margin="0,100,0,0"
+                       TextColor="#fff"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"/>
+
+
+               
+                <StackLayout Margin="30,20,30,20">
+                    <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
+                    <Entry x:Name="txt_cpf"
+                           BackgroundColor="#FFF"
+                           FontSize="Medium"
+                           VerticalOptions="End"
+                           TextColor="#841160"
+                           Margin="10,10,10,10"
+                           Placeholder="cpf"/>
+
+                    <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
+                    <Entry x:Name="txt_senha"
+                           BackgroundColor="#FFF"
+                           FontSize="Medium"
+                           VerticalOptions="End"
+                           TextColor="#841160"
+                           Margin="10,10,10,10"
+                           Placeholder="senha"/>
+
+                    <Button x:Name="btn_login" 
+                                Text="login"
+                                Clicked="btn_login_Clicked"/>
+
+                    <Label Text="nao tenho conta:"/>
+                    <Button x:Name="btn_cadastrar" 
+                                Text="cadastrar"
+                                Clicked="btn_cadastrar_Clicked"/>
+               
+                </StackLayout>
+              
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

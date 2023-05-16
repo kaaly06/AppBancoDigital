@@ -18,6 +18,17 @@ namespace AppBancoDigital.View
         public LoginCorrentista()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void btn_login_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cadastrar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

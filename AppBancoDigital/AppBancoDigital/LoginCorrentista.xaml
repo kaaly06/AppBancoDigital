@@ -6,52 +6,71 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-               <!--logo--> <Label Text="inter" 
-                   TextColor="#fff"
-                   FontSize="40"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Start"
-                   Margin="10,10,10,10"/>
+            <StackLayout Padding="20">
+               <!--logo-->
+                <Image x:Name="Logo" Scale="2.5"/>
 
                 <Label Text="Bem-Vindo(a)"
                        Margin="0,100,0,0"
                        TextColor="#fff"
                        FontSize="Medium"
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource FonteBoasVindas}"/>
+             
 
 
-               
-                <StackLayout Margin="30,20,30,20">
+               <!--frame + scrollview (esquece)-->
+                   
+                <StackLayout Margin="30,60,30,20">
                     <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
-                    <Entry x:Name="txt_cpf"
-                           BackgroundColor="#FFF"
+                    <Frame CornerRadius="20"
+                           WidthRequest="10"
+                           HeightRequest="30">
+
+                        <Entry x:Name="txt_cpf"                       
                            FontSize="Medium"
                            VerticalOptions="End"
                            TextColor="#841160"
-                           Margin="10,10,10,10"
+                           Margin="10,5,10,5"
                            Placeholder="cpf"/>
+                    </Frame>
 
                     <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
-                    <Entry x:Name="txt_senha"
+                    <Frame CornerRadius="20"
+                           WidthRequest="15"
+                           HeightRequest="10">
+                        <Entry x:Name="txt_senha"
                            BackgroundColor="#FFF"
                            FontSize="Medium"
                            VerticalOptions="End"
                            TextColor="#841160"
-                           Margin="10,10,10,10"
+                           Margin="10,5,10,5"
                            Placeholder="senha"/>
+                    </Frame>
 
                     <Button x:Name="btn_login" 
                                 Text="login"
-                                Clicked="btn_login_Clicked"/>
+                                Clicked="btn_login_Clicked"
+                                CornerRadius="20"
+                                Padding="10"
+                                Margin="5"
+                                BackgroundColor="#fff"
+                                BorderColor="#841160"/>
 
-                    <Label Text="nao tenho conta:"/>
-                    <Button x:Name="btn_cadastrar" 
+                    <Label Text="não tenho conta:"
+                           TextColor="White"/>
+
+                            <Button x:Name="btn_cadastrar" 
                                 Text="cadastrar"
-                                Clicked="btn_cadastrar_Clicked"/>
-               
-                </StackLayout>
-              
+                                Clicked="btn_cadastrar_Clicked"
+                                CornerRadius="20"
+                                BorderColor="#841160"
+                                    BackgroundColor="#fff"
+                                    Padding="10"
+                                    Margin="5"/>
+
+                        </StackLayout>
+    
             </StackLayout>
         </StackLayout>
 

@@ -2,10 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.LoginCorrentista"
-               Background="#801637">
+             BackgroundColor="#801637">
 
     <ContentPage.Content>
         <StackLayout>
+  
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0">
+                        <GradientStop Color="#D47FC5"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#801637"
+                                      Offset="1.0"/>
+
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
             <StackLayout Padding="20">
                <!--logo-->
                 <Image x:Name="Logo" Scale="2.5"/>
@@ -23,7 +35,7 @@
                    
                 <StackLayout Margin="30,60,30,20">
                     <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
-                    <Frame CornerRadius="20"
+                    <Frame CornerRadius="10"
                            WidthRequest="10"
                            HeightRequest="30">
 
@@ -36,7 +48,7 @@
                     </Frame>
 
                     <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
-                    <Frame CornerRadius="20"
+                    <Frame CornerRadius="10"
                            WidthRequest="15"
                            HeightRequest="10">
                         <Entry x:Name="txt_senha"
@@ -51,7 +63,7 @@
                     <Button x:Name="btn_login" 
                                 Text="login"
                                 Clicked="btn_login_Clicked"
-                                CornerRadius="20"
+                                CornerRadius="10"
                                 Padding="10"
                                 Margin="5"
                                 BackgroundColor="#fff"
@@ -63,7 +75,7 @@
                             <Button x:Name="btn_cadastrar" 
                                 Text="cadastrar"
                                 Clicked="btn_cadastrar_Clicked"
-                                CornerRadius="20"
+                                CornerRadius="10"
                                 BorderColor="#841160"
                                     BackgroundColor="#fff"
                                     Padding="10"

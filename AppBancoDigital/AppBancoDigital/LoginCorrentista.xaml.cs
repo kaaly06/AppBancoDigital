@@ -18,7 +18,7 @@ namespace AppBancoDigital.View
         public LoginCorrentista()
         {
             InitializeComponent();
-
+            
             //Frame.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_login.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);

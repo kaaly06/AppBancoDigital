@@ -1,91 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBancoDigital.View.LoginCorrentista"
-             BackgroundColor="#801637">
+             x:Class="AppBancoDigital.View.LoginCorrentista">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="#D47FC5" Offset="0.1"/>
+            <GradientStop Color="#801637" Offset="0.5"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <ContentPage.Content>
-        <StackLayout>
-  
-            <Grid>
-                <Grid.Background>
-                    <LinearGradientBrush StartPoint="0,0">
-                        <GradientStop Color="#D47FC5"
-                                      Offset="0.1"/>
-                        <GradientStop Color="#801637"
-                                      Offset="1.0"/>
 
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
-            <StackLayout Padding="20">
-               <!--logo-->
-                <Image x:Name="Logo" Scale="2.5"/>
+        <StackLayout Padding="20">
+            <!--logo-->
+            <Image x:Name="Logo" Scale="2.5"/>
 
-                <Label Text="Bem-Vindo(a)"
+            <Label Text="Bem-Vindo(a)"
                        Margin="0,100,0,0"
                        TextColor="#fff"
                        FontSize="Medium"
                        HorizontalTextAlignment="Center"
                        Style="{StaticResource FonteBoasVindas}"/>
-             
 
 
-               <!--frame + scrollview (esquece)-->
-                   
-                <StackLayout Margin="30,60,30,20">
-                    <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
-                    <Frame CornerRadius="10"
+
+            <!--frame + scrollview (esquece)-->
+
+            <StackLayout Margin="30,60,30,20">
+                <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
+                <Frame CornerRadius="10"
                            WidthRequest="10"
                            HeightRequest="30">
 
-                        <Entry x:Name="txt_cpf"                       
+                    <Entry x:Name="txt_cpf"                       
                            FontSize="Medium"
                            VerticalOptions="End"
                            TextColor="#841160"
                            Margin="10,5,10,5"
-                           Placeholder="cpf"/>
-                    </Frame>
+                           Placeholder="CPF"/>
+                </Frame>
 
-                    <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
-                    <Frame CornerRadius="10"
+                <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
+                <Frame CornerRadius="10"
                            WidthRequest="15"
                            HeightRequest="10">
-                        <Entry x:Name="txt_senha"
+                    <Entry x:Name="txt_senha"
                            BackgroundColor="#FFF"
                            FontSize="Medium"
                            VerticalOptions="End"
                            TextColor="#841160"
                            Margin="10,5,10,5"
                            Placeholder="senha"/>
-                    </Frame>
+                </Frame>
 
-                    <Button x:Name="btn_login" 
+                <Button x:Name="btn_login" 
                                 Text="login"
+                                TextColor="#fff"
                                 Clicked="btn_login_Clicked"
                                 CornerRadius="10"
                                 Padding="10"
                                 Margin="5"
-                                BackgroundColor="#fff"
+                                BackgroundColor="#511024"
                                 BorderColor="#841160"/>
 
-                    <Label Text="não tenho conta:"
+                <Label Text="não tenho conta:"
                            TextColor="White"/>
 
-                            <Button x:Name="btn_cadastrar" 
+                <Button x:Name="btn_cadastrar" 
                                 Text="cadastrar"
+                                TextColor="#511024"
                                 Clicked="btn_cadastrar_Clicked"
                                 CornerRadius="10"
-                                BorderColor="#841160"
-                                    BackgroundColor="#fff"
+                                BorderColor="#F9D8D9"
+                                    BackgroundColor="#F9D8D9"
                                     Padding="10"
                                     Margin="5"/>
 
-                        </StackLayout>
-    
             </StackLayout>
+
         </StackLayout>
-
-
     </ContentPage.Content>
 </ContentPage>

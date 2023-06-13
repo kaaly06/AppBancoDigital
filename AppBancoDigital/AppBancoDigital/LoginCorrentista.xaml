@@ -4,7 +4,7 @@
              x:Class="AppBancoDigital.View.LoginCorrentista">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
-            <GradientStop Color="#D47FC5" Offset="0.1"/>
+            <GradientStop Color="#AD4E83" Offset="0.1"/>
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -17,7 +17,7 @@
 
             <Label Text="Bem-Vindo(a)"
                        Margin="0,100,0,0"
-                       TextColor="#fff"
+                       TextColor="#F9D8D9"
                        FontSize="Medium"
                        HorizontalTextAlignment="Center"
                        Style="{StaticResource FonteBoasVindas}"/>
@@ -27,17 +27,20 @@
             <!--frame + scrollview (esquece)-->
 
             <StackLayout Margin="30,60,30,20">
-                <Label Text="cpf" TextColor="white" FontAttributes="Bold"/>
-                <Frame CornerRadius="10"
+                
+                <Frame CornerRadius="15" x:Name="FrameCpf"
                            WidthRequest="10"
-                           HeightRequest="30">
+                           HeightRequest="15">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="CPF" TextColor="#841160" FontAttributes="Bold"/>
 
-                    <Entry x:Name="txt_cpf"                       
-                           FontSize="Medium"
-                           VerticalOptions="End"
+                        <Entry x:Name="txt_cpf"                       
+                           FontSize="5"
                            TextColor="#841160"
                            Margin="10,5,10,5"
-                           Placeholder="CPF"/>
+                           Placeholder="000.000.000-00"/>
+                    </StackLayout>
+
                 </Frame>
 
                 <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
@@ -54,7 +57,7 @@
                 </Frame>
 
                 <Button x:Name="btn_login" 
-                                Text="login"
+                                Text="Entrar"
                                 TextColor="#fff"
                                 Clicked="btn_login_Clicked"
                                 CornerRadius="10"
@@ -63,11 +66,11 @@
                                 BackgroundColor="#511024"
                                 BorderColor="#841160"/>
 
-                <Label Text="não tenho conta:"
+                <Label Text="Não tem conta?"
                            TextColor="White"/>
 
                 <Button x:Name="btn_cadastrar" 
-                                Text="cadastrar"
+                                Text="Se Cadastrar"
                                 TextColor="#511024"
                                 Clicked="btn_cadastrar_Clicked"
                                 CornerRadius="10"

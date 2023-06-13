@@ -19,7 +19,7 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             
-            //Frame.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
+            //FrameCpf.BackgroundColor = Color.FromRgba(250, 250, 250, 50);
             //btn_login.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
 

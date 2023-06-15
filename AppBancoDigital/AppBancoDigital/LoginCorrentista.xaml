@@ -13,48 +13,54 @@
 
         <StackLayout Padding="20">
             <!--logo-->
-            <Image x:Name="Logo" Scale="2.5"/>
+            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start"/>
 
-            <Label Text="Bem-Vindo(a)"
-                       Margin="0,100,0,0"
-                       TextColor="#F9D8D9"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="Center"
-                       Style="{StaticResource FonteBoasVindas}"/>
+            
+             <Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center"/>
 
-
+            <Label
+               Text="BEM-VINDO(A)"
+               HorizontalOptions="Center"
+               FontAttributes="Bold, Italic"
+               TextColor="White" Style="{ StaticResource FonteBoasVindas}"/>
 
             <!--frame + scrollview (esquece)-->
 
-            <StackLayout Margin="30,60,30,20">
+            <StackLayout Margin="20,50,30,20">
+                <Label Text="CPF:" TextColor="#ffff" 
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"/>
                 
-                <Frame CornerRadius="15" x:Name="FrameCpf"
+                <Frame CornerRadius="15" x:Name="FrameCpf" Padding="25"
                            WidthRequest="10"
-                           HeightRequest="15">
+                           HeightRequest="40">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="CPF" TextColor="#841160" FontAttributes="Bold"/>
-
-                        <Entry x:Name="txt_cpf"                       
-                           FontSize="5"
-                           TextColor="#841160"
-                           Margin="10,5,10,5"
-                           Placeholder="000.000.000-00"/>
+                      
+                    
+                        <Entry x:Name="txt_cpf" HorizontalOptions="FillAndExpand" 
+                           BackgroundColor="#ffff"/>
                     </StackLayout>
-
                 </Frame>
 
-                <Label Text="senha" TextColor="#FFF" FontAttributes="Bold"/>
-                <Frame CornerRadius="10"
-                           WidthRequest="15"
-                           HeightRequest="10">
-                    <Entry x:Name="txt_senha"
-                           BackgroundColor="#FFF"
-                           FontSize="Medium"
-                           VerticalOptions="End"
-                           TextColor="#841160"
-                           Margin="10,5,10,5"
-                           Placeholder="senha"/>
+                <!--frame senha-->
+                <Label Text="SENHA:" TextColor="#fff" 
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"/>
+
+
+                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="25"
+                           WidthRequest="10"
+                           HeightRequest="40">
+                    <StackLayout Orientation="Horizontal">
+
+                        <Entry x:Name="txt_senha" HorizontalOptions="FillAndExpand" 
+                               BackgroundColor="#ffff"/>
+                    </StackLayout>
                 </Frame>
+
+                <!--botões-->
 
                 <Button x:Name="btn_login" 
                                 Text="Entrar"
@@ -69,6 +75,8 @@
                 <Label Text="Não tem conta?"
                            TextColor="White"/>
 
+
+
                 <Button x:Name="btn_cadastrar" 
                                 Text="Se Cadastrar"
                                 TextColor="#511024"
@@ -78,9 +86,7 @@
                                     BackgroundColor="#F9D8D9"
                                     Padding="10"
                                     Margin="5"/>
-
             </StackLayout>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

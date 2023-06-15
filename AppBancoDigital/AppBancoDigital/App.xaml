@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
 
-            <Style TargetType="Label" x:Key="FonteBoasVindas">
+            <Style x:Key="FonteBoasVindas" TargetType="Label">
                 <Setter Property="FontFamily">
                     <Setter.Value>
                         <OnPlatform x:TypeArguments="x:String"

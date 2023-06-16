@@ -2,11 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.CadastroCorrentista">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="#AD4E83" Offset="0.1"/>
+            <GradientStop Color="#801637" Offset="0.5"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        
+        <StackLayout Margin="40">
+
+            <Label Text="CPF:" Style="{StaticResource LabelCampos}"/>
+            
+            <Frame x:Name="FrameCpf" 
+                   Padding="10"
+                   Margin="0,10,0,0"
+                   CornerRadius="20"
+                   WidthRequest="10"
+                   HeightRequest="40">
+                
+                <StackLayout Orientation="Horizontal">
+
+
+                    <Entry x:Name="txt_cpf" 
+                           HorizontalOptions="FillAndExpand" 
+                           BackgroundColor="#ffff"/>
+                    
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

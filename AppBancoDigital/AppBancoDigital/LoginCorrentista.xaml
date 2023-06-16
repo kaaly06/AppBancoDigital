@@ -13,10 +13,10 @@
 
         <StackLayout Padding="20">
             <!--logo-->
-            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start"/>
+            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"/>
 
-            
-             <Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center"/>
+
+            <Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"/>
 
             <Label
                Text="BEM-VINDO(A)"
@@ -32,7 +32,7 @@
                                VerticalTextAlignment="Center"
                                FontAttributes="Bold"/>
                 
-                <Frame CornerRadius="15" x:Name="FrameCpf" Padding="25"
+                <Frame CornerRadius="15" x:Name="FrameCpf" Padding="10"
                            WidthRequest="10"
                            HeightRequest="40">
                     <StackLayout Orientation="Horizontal">
@@ -50,7 +50,7 @@
                                FontAttributes="Bold"/>
 
 
-                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="25"
+                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="10"
                            WidthRequest="10"
                            HeightRequest="40">
                     <StackLayout Orientation="Horizontal">
@@ -68,15 +68,12 @@
                                 Clicked="btn_login_Clicked"
                                 CornerRadius="10"
                                 Padding="10"
-                                Margin="5"
+                                Margin="16"
                                 BackgroundColor="#511024"
                                 BorderColor="#841160"/>
 
                 <Label Text="Não tem conta?"
                            TextColor="White"/>
-
-
-
                 <Button x:Name="btn_cadastrar" 
                                 Text="Se Cadastrar"
                                 TextColor="#511024"
@@ -85,7 +82,7 @@
                                 BorderColor="#F9D8D9"
                                     BackgroundColor="#F9D8D9"
                                     Padding="10"
-                                    Margin="5"/>
+                                    Margin="16"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

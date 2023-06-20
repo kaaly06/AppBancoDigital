@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBancoDigital.View.CadastroCorrentista">
+             x:Class="AppBancoDigital.View.CadastroCorrentista"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack">
     
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
@@ -28,8 +29,15 @@
 
                     <Entry x:Name="txt_cpf" 
                            HorizontalOptions="FillAndExpand" 
-                           BackgroundColor="#ffff"/>
-                    
+                           BackgroundColor="#ffff">
+                        <Entry.Behaviors>
+                            <behaviorPack:CPFValidationBehavior/>
+                            <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX"/>
+
+                        </Entry.Behaviors>
+                    </Entry>
+
+
                 </StackLayout>
             </Frame>
 

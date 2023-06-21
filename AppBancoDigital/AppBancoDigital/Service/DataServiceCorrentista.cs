@@ -9,27 +9,22 @@ namespace AppBancoDigital.Service
 {
     public class DataServiceCorrentista : DataService
     {     // login do cliente
-        public static async Task<Correntista> LoginCorrentistaAsync(Correntista c)
+        public static async Task<Correntista> CadastroCorrentista(Correntista c)
         {
-           var json_enviar = JsonConvert.SerializeObject(c);
+            var json_to_send = JsonConvert.SerializeObject(c);
 
-            Console.WriteLine("__________________________________________________________________");
-            Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
-            Console.WriteLine(json_enviar);
-            Console.WriteLine("__________________________________________________________________");
+            string json = await DataService.PostDataToService(json_to_send, "/correntista/save");
 
-            string json = await DataService.PostDataToService(json_enviar, "/correntista/login");
+            Correntista correntista = JsonConvert.DeserializeObject<Correntista>(json);
 
-            return JsonConvert.DeserializeObject<Correntista>(json);
+            return correntista;
         }
 
-        public static async Task<Correntista> SalvarAsync(Correntista c)
+        public static async Task<Correntista> Entrar(Correntista c)
         {
-            var json_enviar = JsonConvert.SerializeObject(c);
+            var json_to_send = JsonConvert.SerializeObject(c);
 
-            string json = await DataService.PostDataToService(json_enviar, "/correntista/salvar");
-
-            Correntista corr = JsonConvert.DeserializeObject<Correntista>(json);
+            string json = await DataService.PostDataToService(json_to_send, "/correntista/entrar");
 
             return JsonConvert.DeserializeObject<Correntista>(json);
         }

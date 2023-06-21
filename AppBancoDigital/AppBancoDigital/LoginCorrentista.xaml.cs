@@ -35,7 +35,7 @@ namespace AppBancoDigital.View
         {
             try
             {
-                Model.Correntista c = await DataServiceCorrentista.LoginCorrentistaAsync(new Model.Correntista
+                Model.Correntista c = await DataServiceCorrentista.CadastroCorrentista(new Model.Correntista
                 {
                     CPF = txt_cpf.Text,
                     senha = txt_senha.Text,

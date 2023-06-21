@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBancoDigital.View.LoginCorrentista">
-    <ContentPage.Background>
+             x:Class="AppBancoDigital.View.LoginCorrentista"
+             BackgroundColor="#801637">
+    <!--<ContentPage.Background>
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
             <GradientStop Color="#AD4E83" Offset="0.1"/>
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
-    </ContentPage.Background>
+    </ContentPage.Background>-->
 
     <ContentPage.Content>
 
@@ -80,9 +81,9 @@
                                 Clicked="btn_cadastrar_Clicked"
                                 CornerRadius="10"
                                 BorderColor="#F9D8D9"
-                                    BackgroundColor="#F9D8D9"
-                                    Padding="10"
-                                    Margin="16"/>
+                                BackgroundColor="#F9D8D9"
+                                Padding="10"
+                                Margin="16"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -21,6 +21,22 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="FontSize" Value="18"/>
             </Style>
+            
+            <!--botão rosa-->
+            <Style x:Key="BotaoCadastrar" TargetType="Button">
+                <Setter Property="TextColor" Value="#511024"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="#F9D8D9"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Margin" Value="15"/>
+            </Style>
+
+            <Style x:Key="LabelErros" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="Margin" Value="5,0,0,10"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

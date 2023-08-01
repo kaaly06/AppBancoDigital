@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              x:Class="AppBancoDigital.View.LoginCorrentista"
              BackgroundColor="#801637">
-    <!--<ContentPage.Background>
+    
+    <ContentPage.Background>
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
             <GradientStop Color="#AD4E83" Offset="0.1"/>
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
-    </ContentPage.Background>-->
+    </ContentPage.Background>
 
     <ContentPage.Content>
 
@@ -26,7 +28,8 @@
                TextColor="White" Style="{ StaticResource FonteBoasVindas}"/>
 
             <!--frame + scrollview (esquece)-->
-
+             
+            <!--campo cpf-->
             <StackLayout Margin="20,50,30,20">
                 <Label Text="CPF:" TextColor="#ffff" 
                                VerticalOptions="FillAndExpand"
@@ -36,15 +39,19 @@
                 <Frame CornerRadius="15" x:Name="FrameCpf" Padding="10"
                            WidthRequest="10"
                            HeightRequest="40">
+
                     <StackLayout Orientation="Horizontal">
-                      
-                    
+
                         <Entry x:Name="txt_cpf" HorizontalOptions="FillAndExpand" 
-                           BackgroundColor="#ffff"/>
+                           BackgroundColor="#ffff" TabIndex="0">
+                            <Entry.Behaviors>
+                                <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </Frame>
 
-                <!--frame senha-->
+                <!--frame/campo senha-->
                 <Label Text="SENHA:" TextColor="#fff" 
                                VerticalOptions="FillAndExpand"
                                VerticalTextAlignment="Center"
@@ -57,12 +64,11 @@
                     <StackLayout Orientation="Horizontal">
 
                         <Entry x:Name="txt_senha" HorizontalOptions="FillAndExpand" 
-                               BackgroundColor="#ffff"/>
+                               BackgroundColor="#ffff" IsPassword="True" TabIndex="1"/>
                     </StackLayout>
                 </Frame>
 
-                <!--botões-->
-
+                <!--botões de login/cadastrar-->
                 <Button x:Name="btn_login" 
                                 Text="Entrar"
                                 TextColor="#fff"

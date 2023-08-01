@@ -32,27 +32,8 @@ namespace AppBancoDigital.View
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Model.Correntista c = await DataServiceCorrentista.CadastroCorrentista(new Model.Correntista
-                {
-                    CPF = txt_cpf.Text,
-                    senha = txt_senha.Text,
-                });
-
-                if (c.id != null)
-                {
-                    App.DadosCorrentista = c;
-                    App.Current.MainPage = new NavigationPage(new View.LoginCorrentista());
-                }
-                else
-                    throw new Exception("Dados de login inválidos.");
-
-            }catch(Exception ex)
-            {
-                await DisplayAlert("Ops!", ex.Message, "OK");
-            }
+        {  
+                               
         }
 
         private void btn_cadastrar_Clicked(object sender, EventArgs e)

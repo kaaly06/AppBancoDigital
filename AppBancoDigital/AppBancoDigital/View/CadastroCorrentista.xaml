@@ -15,39 +15,41 @@
         
         <StackLayout Margin="40">
 
-            <!--campo nome-->
-            <Label Text="NOME:" Style="{StaticResource LabelCampos}"/>
+            <Label Text="Informe seus dados para cadastro" Style="{StaticResource LabelCampos}"
+                   Margin="5"/>
 
+            <!--campo nome-->
+           
             <Frame x:Name="FrameNome"
                    Padding="15"
                    Margin="0,10,0,10"
                    CornerRadius="20"
                    WidthRequest="10"
-                   HeightRequest="40">
+                   HeightRequest="40" >
 
                 <StackLayout Orientation="Horizontal">
-                    <Entry x:Name="txt_nome" TabIndex="0"
+                    <Entry x:Name="txt_nome" Placeholder="Nome"
+                           TabIndex="0"
                            HorizontalOptions="FillAndExpand"
-                           BackgroundColor="#ffff">
-                        
+                           BackgroundColor="#ffff"
+                           TextTransform="Lowercase"
+                           CursorPosition="5">
                     </Entry>
                 </StackLayout>
             </Frame>
               
             <!--campo cpf-->
-            <Label Text="CPF:" Style="{StaticResource LabelCampos}"/>
-
             <Frame x:Name="FrameCpf" 
-                   Padding="15"
+                   Padding="10"
                    Margin="0,10,0,0"
                    CornerRadius="20"
                    WidthRequest="10"
                    HeightRequest="35">
-                
+
                 <StackLayout Orientation="Horizontal">
 
-
-                    <Entry x:Name="txt_cpf" TabIndex="1"
+                    <Entry x:Name="txt_cpf" Placeholder="Cpf"
+                           TabIndex="1"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff">
                         <Entry.Behaviors>
@@ -55,16 +57,12 @@
                             <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX"/>
                         </Entry.Behaviors>
                     </Entry>
-
-
                 </StackLayout>
             </Frame>
 
             <!--campo email-->
-            <Label Text="E-MAIL" Style="{StaticResource LabelCampos}" Margin="5"/>
-
             <Frame x:Name="FrameEmail" 
-                   Padding="15"
+                   Padding="10"
                    Margin="0,10,0,0"
                    CornerRadius="20"
                    WidthRequest="10"
@@ -73,7 +71,8 @@
             <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_email" TabIndex="2"
+                    <Entry x:Name="txt_email" Placeholder="Email"
+                           TabIndex="2"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff">
                 </Entry>
@@ -84,7 +83,7 @@
             <Label Text="SENHA:" Style="{StaticResource LabelCampos}" Margin="5"/>
 
             <Frame x:Name="FrameSenha" 
-                   Padding="15"
+                   Padding="10"
                    Margin="0,10,0,0"
                    CornerRadius="20"
                    WidthRequest="10"
@@ -95,7 +94,8 @@
 
                     <Entry x:Name="txt_senha" TabIndex="3"
                            HorizontalOptions="FillAndExpand" 
-                           BackgroundColor="#ffff">
+                           BackgroundColor="#ffff"
+                            IsPassword="True">
                         <Entry.Behaviors>
                             <behaviorPack:PasswordValidationBehavior />
                         </Entry.Behaviors>
@@ -107,7 +107,7 @@
             <Label Text="CONFIRMAR SENHA:" Style="{StaticResource LabelCampos}" Margin="5"/>
 
             <Frame x:Name="FrameConfirmarSenha" 
-                   Padding="15"
+                   Padding="10"
                    Margin="0,10,0,0"
                    CornerRadius="20"
                    WidthRequest="10"
@@ -118,7 +118,9 @@
 
                     <Entry x:Name="txt_conf_senha" TabIndex="4"
                            HorizontalOptions="FillAndExpand" 
-                           BackgroundColor="#ffff">
+                           BackgroundColor="#ffff"                           
+                           IsPassword="True">
+                          <!--esconde a senha-->
                         <Entry.Behaviors>
                             <behaviorPack:PasswordValidationBehavior />
                             <behaviorPack:CompareValidationBehavior BindingContext="{x:Reference txt_senha}" Text="{Binding Text}"/>

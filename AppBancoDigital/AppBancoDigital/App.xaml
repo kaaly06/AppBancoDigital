@@ -18,7 +18,7 @@
             <!-- Label padrão dos títulos-->
             <Style x:Key="LabelCampos" TargetType="Label">
                 <Setter Property="TextColor" Value="#ffff"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontAttributes" />
                 <Setter Property="FontSize" Value="18"/>
             </Style>
             

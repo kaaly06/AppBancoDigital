@@ -14,8 +14,10 @@ namespace AppBancoDigital.View
 	public partial class CadastroCorrentista : ContentPage
 	{
 		public CadastroCorrentista ()
+
 		{
 			InitializeComponent ();
+			NavigationPage.SetHasNavigationBar(this, false);	
 		}
 
 

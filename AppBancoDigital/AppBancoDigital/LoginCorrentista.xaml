@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              x:Class="AppBancoDigital.View.LoginCorrentista"
+             
              BackgroundColor="#801637">
     
     <ContentPage.Background>
@@ -14,8 +15,9 @@
 
     <ContentPage.Content>
 
-        <StackLayout Padding="20">
+        <StackLayout Padding="10" VerticalOptions="Center">
             <!--logo-->
+            <ActivityIndicator x:Name="carregando" IsRunning="False"/>
             <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"/>
 
 
@@ -31,6 +33,7 @@
              
             <!--campo cpf-->
             <StackLayout Margin="20,50,30,20">
+                
                 <Label Text="CPF:" TextColor="#ffff" 
                                VerticalOptions="FillAndExpand"
                                VerticalTextAlignment="Center"
@@ -67,6 +70,8 @@
                                BackgroundColor="#ffff" IsPassword="True" TabIndex="1"/>
                     </StackLayout>
                 </Frame>
+
+                <Label x:Name="lbl_erro" Text="" Style="{StaticResource LabelErros}"/>
 
                 <!--botões de login/cadastrar-->
                 <Button x:Name="btn_login" 

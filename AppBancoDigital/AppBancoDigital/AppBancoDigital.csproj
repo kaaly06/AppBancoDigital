@@ -12,8 +12,15 @@
 
   <ItemGroup>
     <Compile Remove="Dados\**" />
+    <Compile Remove="View\NovaPasta\**" />
     <EmbeddedResource Remove="Dados\**" />
+    <EmbeddedResource Remove="View\NovaPasta\**" />
     <None Remove="Dados\**" />
+    <None Remove="View\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="View\TelaInicial.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +49,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="LoginCorrentista.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TelaInicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\CadastroCorrentista.xaml">

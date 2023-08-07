@@ -13,16 +13,16 @@
     
     <ContentPage.Content>
         
-        <StackLayout Margin="40">
+        <StackLayout  VerticalOptions="Center" Margin="38">
 
             <Label Text="Informe seus dados para cadastro" Style="{StaticResource LabelCampos}"
-                   Margin="5"/>
+                   Margin="10"/>
 
             <!--campo nome-->
            
             <Frame x:Name="FrameNome"
-                   Padding="15"
-                   Margin="0,10,0,10"
+                   Padding="10"
+                   Margin="0,15,0,15"
                    CornerRadius="20"
                    WidthRequest="10"
                    HeightRequest="40" >
@@ -41,10 +41,10 @@
             <!--campo cpf-->
             <Frame x:Name="FrameCpf" 
                    Padding="10"
-                   Margin="0,10,0,0"
+                   Margin="0,10,0,10"
                    CornerRadius="20"
                    WidthRequest="10"
-                   HeightRequest="35">
+                   HeightRequest="40">
 
                 <StackLayout Orientation="Horizontal">
 
@@ -63,10 +63,10 @@
             <!--campo email-->
             <Frame x:Name="FrameEmail" 
                    Padding="10"
-                   Margin="0,10,0,0"
+                   Margin="0,10,0,10"
                    CornerRadius="20"
                    WidthRequest="10"
-                   HeightRequest="35">
+                   HeightRequest="40">
 
             <StackLayout Orientation="Horizontal">
 
@@ -80,19 +80,20 @@
             </Frame>
 
             <!--campo senha-->
-            <Label Text="SENHA:" Style="{StaticResource LabelCampos}" Margin="5"/>
+         
 
             <Frame x:Name="FrameSenha" 
                    Padding="10"
-                   Margin="0,10,0,0"
+                   Margin="0,10,0,10"
                    CornerRadius="20"
                    WidthRequest="10"
-                   HeightRequest="35">
+                   HeightRequest="40">
 
                 <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_senha" TabIndex="3"
+                    <Entry x:Name="txt_senha" Placeholder="Senha"
+                           TabIndex="3"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff"
                             IsPassword="True">
@@ -104,19 +105,20 @@
             </Frame>
 
             <!--campo confirmar senha-->
-            <Label Text="CONFIRMAR SENHA:" Style="{StaticResource LabelCampos}" Margin="5"/>
+           
 
             <Frame x:Name="FrameConfirmarSenha" 
                    Padding="10"
-                   Margin="0,10,0,0"
+                   Margin="0,10,0,10"
                    CornerRadius="20"
                    WidthRequest="10"
-                   HeightRequest="35">
+                   HeightRequest="40">
 
                 <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_conf_senha" TabIndex="4"
+                    <Entry x:Name="txt_conf_senha" Placeholder="Confirmar Senha"
+                           TabIndex="4"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff"                           
                            IsPassword="True">
@@ -131,9 +133,8 @@
 
             <Label x:Name="lbl_erro" Text="" Style="{StaticResource LabelErros}"/>
 
-            <Button Text="Cadastrar" Style="{StaticResource BotaoCadastrar}" 
-                     Clicked="Cadastrar" />
-            
+            <Button Text="Cadastrar" Style="{StaticResource BotaoCadastrar}"/>
+
 
 
         </StackLayout>

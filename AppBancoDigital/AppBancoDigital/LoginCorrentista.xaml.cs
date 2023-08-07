@@ -25,15 +25,51 @@ namespace AppBancoDigital.View
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
             Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo.png");
             Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
-            
-         
-
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)
-        {  
-                               
+        {
+            carregando.IsRunning = true;
+            
+            if (txt_cpf.Text == null || txt_senha.Text == null)
+            {
+                lbl_erro.Text = "Insira o usuário e a senha!";
+                carregando.IsRunning = false;
+            }
+            else
+            {
+                try
+                {
+                    Model.Correntista c = await DataServiceCorrentista.Entrar(new Model.Correntista
+                    {
+                        senha = txt_senha.Text,
+                        CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
+                    });
+
+                    if (c.id != null)
+                    {
+                        App.DadosCorrentista= c;
+
+                        await Navigation.PushAsync(new TelaInicial());
+
+                    }
+                    else
+                    {
+                        lbl_erro.Text = "Usuário ou senha incorretos!";
+                            carregando.IsRunning = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ops", ex.Message, "OK");
+                    Console.WriteLine(ex.StackTrace);
+                }
+                finally
+                {
+                    carregando.IsRunning = false;
+                }
+            }
         }
 
         private void btn_cadastrar_Clicked(object sender, EventArgs e)

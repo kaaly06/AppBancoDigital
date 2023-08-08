@@ -21,45 +21,33 @@ namespace AppBancoDigital.View
 			NavigationPage.SetHasNavigationBar(this, false);	
 		}
 
-
-
-		private async void Cadastrar(object sender, EventArgs e)
-		{
-			if (txt_nome.Text == null || txt_cpf.Text == null || txt_senha.Text == null || txt_conf_senha.Text == null)
+        private async void Button_Clicked_cadastrar(object sender, EventArgs e)
+        {
+          try
 			{
-				lbl_erro.Text = "Preencha todos os campos!";
-			}
-			else
-			{
-				if (txt_senha.Text != txt_conf_senha.Text)
+				Model.Correntista c = await DataServiceCorrentista.CorrentistaSalvar(new Model.Correntista
+					{
+                    nome = txt_nome.Text,
+                    senha = txt_senha.Text,
+                    email = txt_email.Text,
+                    CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
+
+                });
+
+				if (c.Id != null)
 				{
-					lbl_erro.Text = "A senha deve ser a mesma nos dois campos!";
+					App.DadosCorrentista = c;
+
+					await Navigation.PushAsync(new TelaInicial());
 				}
 				else
-				{
-					try
-					{
-						Model.Correntista c = await DataServiceCorrentista.CadastroCorrentista(new Model.Correntista
-						{
-							nome = txt_nome.Text,
-                            senha = txt_senha.Text,                         
-                            CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
-                        });
-
-                        string msg = $"Correntista criado! Faça login para acessar.";
-
-                        await DisplayAlert("Sucesso!", msg, "OK");
-
-                        await Navigation.PushAsync(new LoginCorrentista());
-                    }
-					catch (Exception ex)
-					{
-                        await DisplayAlert("Ops", ex.Message, "OK");
-                    }
-				}
-
+					throw new Exception("Ocorreu um erro ao Salvar seu Cadastro.");
 			}
-
-		} 
+			catch(Exception ex)
+			{
+				Console.WriteLine(ex.StackTrace);
+				await DisplayAlert("Ops!", ex.Message, "OK");
+            }
+        }
     }
 }

@@ -71,11 +71,11 @@
             <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_email" Placeholder="Email"
+                    <Entry x:Name="txt_email" Keyboard="Email" Placeholder="Email "
                            TabIndex="2"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff">
-                </Entry>
+                    </Entry>
             </StackLayout>
             </Frame>
 
@@ -133,7 +133,7 @@
 
             <Label x:Name="lbl_erro" Text="" Style="{StaticResource LabelErros}"/>
 
-            <Button Text="Cadastrar" Style="{StaticResource BotaoCadastrar}"/>
+            <Button Text="Cadastrar" Clicked="Button_Clicked_cadastrar" Style="{StaticResource BotaoCadastrar}"/>
 
 
 

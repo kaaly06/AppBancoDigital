@@ -47,11 +47,12 @@ namespace AppBancoDigital.View
                         CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
                     });
 
-                    if (c.id != null)
+                    if (c.Id != null)
                     {
-                        App.DadosCorrentista= c;
+                        App.DadosCorrentista = c;
+                        App.Current.MainPage = new NavigationPage(new TelaInicial());
 
-                        await Navigation.PushAsync(new TelaInicial());
+                        //await Navigation.PushAsync(new TelaInicial());
 
                     }
                     else

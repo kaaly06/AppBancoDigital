@@ -19,13 +19,13 @@ namespace AppBancoDigital.View
         public LoginCorrentista()
         {
             InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             //FrameCpf.BackgroundColor = Color.FromRgba(250, 250, 250, 50);
             //btn_login.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
             Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo.png");
             Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
-            NavigationPage.SetHasNavigationBar(this, false);
+            
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)

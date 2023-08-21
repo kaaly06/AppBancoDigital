@@ -2,9 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
-             x:Class="AppBancoDigital.View.LoginCorrentista"
-             
-             BackgroundColor="#801637">
+             x:Class="AppBancoDigital.View.LoginCorrentista">
     
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
@@ -14,16 +12,16 @@
     </ContentPage.Background>
 
     <ContentPage.Content>
-
         <StackLayout Padding="10" VerticalOptions="Center">
             <!--logo-->
+           
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
-            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"/>
+            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45" />
 
 
             <Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"/>
 
-            <Label
+                <Label
                Text="BEM-VINDO(A)"
                HorizontalOptions="Center"
                FontAttributes="Bold, Italic"
@@ -31,43 +29,43 @@
 
             <!--frame + scrollview (esquece)-->
              
-            <!--campo cpf-->
+            <!--frame/campo cpf-->
+            
             <StackLayout Margin="20,50,30,20">
-                
-                <Label Text="CPF:" TextColor="#ffff" 
-                               VerticalOptions="FillAndExpand"
-                               VerticalTextAlignment="Center"
-                               FontAttributes="Bold"/>
                 
                 <Frame CornerRadius="15" x:Name="FrameCpf" Padding="10"
                            WidthRequest="10"
-                           HeightRequest="40">
+                           HeightRequest="40"
+                           Margin="0,0,0,0">
 
                     <StackLayout Orientation="Horizontal">
 
-                        <Entry x:Name="txt_cpf" HorizontalOptions="FillAndExpand" 
-                           BackgroundColor="#ffff" TabIndex="0">
+                        <Entry x:Name="txt_cpf" Placeholder="CPF"                             
+                               TabIndex="0"
+                               HorizontalOptions="FillAndExpand" 
+                               BackgroundColor="#ffff"
+                               CursorPosition="5">
                             <Entry.Behaviors>
                                 <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
                             </Entry.Behaviors>
                         </Entry>
                     </StackLayout>
                 </Frame>
+                
 
-                <!--frame/campo senha-->
-                <Label Text="SENHA:" TextColor="#fff" 
-                               VerticalOptions="FillAndExpand"
-                               VerticalTextAlignment="Center"
-                               FontAttributes="Bold"/>
-
-
-                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="10"
+                <!--frame/campo senha-->    
+                
+                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="10" 
                            WidthRequest="10"
-                           HeightRequest="40">
+                           HeightRequest="40"
+                            Margin="0,10,0,0">
                     <StackLayout Orientation="Horizontal">
 
-                        <Entry x:Name="txt_senha" HorizontalOptions="FillAndExpand" 
-                               BackgroundColor="#ffff" IsPassword="True" TabIndex="1"/>
+                        <Entry x:Name="txt_senha" Placeholder="Senha"
+                               HorizontalOptions="FillAndExpand" 
+                               BackgroundColor="#ffff" 
+                               IsPassword="True" 
+                               TabIndex="1"/>
                     </StackLayout>
                 </Frame>
 
@@ -79,8 +77,7 @@
                                 TextColor="#fff"
                                 Clicked="btn_login_Clicked"
                                 CornerRadius="10"
-                                Padding="10"
-                                Margin="16"
+                              Margin="25,15,0,25"
                                 BackgroundColor="#511024"
                                 BorderColor="#841160"/>
 
@@ -93,8 +90,8 @@
                                 CornerRadius="10"
                                 BorderColor="#F9D8D9"
                                 BackgroundColor="#F9D8D9"
-                                Padding="10"
-                                Margin="16"/>
+                              
+                                Margin="25,10,0,25"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

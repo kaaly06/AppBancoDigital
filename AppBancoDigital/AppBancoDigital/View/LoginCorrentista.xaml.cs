@@ -25,7 +25,8 @@ namespace AppBancoDigital.View
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
             Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo.png");
             Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
-            
+            //logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.SuperBoys.ttf");
+           
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)

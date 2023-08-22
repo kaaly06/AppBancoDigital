@@ -24,8 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Imagens\AbrirOlho.png" />
+    <None Remove="Imagens\FecharOlho.png" />
     <None Remove="Imagens\Logo.png" />
     <None Remove="Imagens\PerfilUsuario.png" />
+    <None Remove="Imagens\ProximaPagina.png" />
     <None Remove="Imagens\SuperBoys.ttf" />
   </ItemGroup>
 
@@ -37,10 +40,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Imagens\AbrirOlho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\FecharOlho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagens\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\PerfilUsuario.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\ProximaPagina.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\SuperBoys.ttf">

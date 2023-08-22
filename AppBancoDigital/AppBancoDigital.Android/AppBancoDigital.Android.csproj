@@ -63,10 +63,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Assets\AMERSN__.ttf">
+    <AndroidAsset Include="Assets\AMERSN__.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <AndroidAsset Include="Assets\PoetsenOne-Regular.ttf" />
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\LilitaOne-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

@@ -6,6 +6,11 @@
     <Application.Resources>
         <ResourceDictionary>
 
+            <Style x:Key="Logo" TargetType="Label">
+                <Setter Property="FontFamily" 
+                        Value="{OnPlatform Android='LilitaOne-Regular.ttf#LilitaOne-Regular'}"/>
+            </Style>
+
             <Style x:Key="FonteBoasVindas" TargetType="Label">
                 <Setter Property="FontFamily">
                     <Setter.Value>
@@ -19,7 +24,7 @@
             <Style x:Key="LabelCampos" TargetType="Label">
                 <Setter Property="TextColor" Value="#ffff"/>
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontSize" Value="15"/>
             </Style>
             
             <!--botão rosa-->

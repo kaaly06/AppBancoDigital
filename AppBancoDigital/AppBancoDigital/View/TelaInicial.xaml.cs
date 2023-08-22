@@ -13,7 +13,9 @@ namespace AppBancoDigital.View
     public partial class TelaInicial : ContentPage
     {
         public TelaInicial()
+
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

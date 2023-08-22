@@ -23,9 +23,10 @@ namespace AppBancoDigital.View
             //FrameCpf.BackgroundColor = Color.FromRgba(250, 250, 250, 50);
             //btn_login.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
-            Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo.png");
-            Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
+            //LogoImagem.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo.png");
+            //Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
             //logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.SuperBoys.ttf");
+           
            
         }
 

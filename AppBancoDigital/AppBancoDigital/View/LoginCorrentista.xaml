@@ -14,18 +14,24 @@
     <ContentPage.Content>
         <StackLayout Padding="10" VerticalOptions="Center">
             <!--logo-->
-           
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
-            <Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45" />
+            <!--Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"-->
+            <!--Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"-->
+
+            <Label
+                Text="Banco Inter" Style="{StaticResource Logo}" 
+                HorizontalOptions="Center"
+                FontSize="55" 
+                TextColor="White"
+                />
 
 
-            <Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"/>
-
-                <Label
+            <Label
+                Margin="15"
                Text="BEM-VINDO(A)"
                HorizontalOptions="Center"
                FontAttributes="Bold, Italic"
-               TextColor="White" Style="{ StaticResource FonteBoasVindas}"/>
+               TextColor="#F9D8D9" Style="{ StaticResource FonteBoasVindas}"/>
 
             <!--frame + scrollview (esquece)-->
              
@@ -58,7 +64,8 @@
                 <Frame CornerRadius="15" x:Name="FrameSenha" Padding="10" 
                            WidthRequest="10"
                            HeightRequest="40"
-                            Margin="0,10,0,0">
+                            Margin="0,10,0,0"
+                       >
                     <StackLayout Orientation="Horizontal">
 
                         <Entry x:Name="txt_senha" Placeholder="Senha"

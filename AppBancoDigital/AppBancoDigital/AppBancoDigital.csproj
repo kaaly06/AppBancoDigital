@@ -27,6 +27,7 @@
     <None Remove="Imagens\AbrirOlho.png" />
     <None Remove="Imagens\Assistente.png" />
     <None Remove="Imagens\FecharOlho.png" />
+    <None Remove="Imagens\logo-remove.png" />
     <None Remove="Imagens\Logo.png" />
     <None Remove="Imagens\PerfilUsuario.png" />
     <None Remove="Imagens\SuperBoys.ttf" />
@@ -44,6 +45,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\FecharOlho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\logo-remove.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\Logo.png">

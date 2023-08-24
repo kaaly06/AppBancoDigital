@@ -6,7 +6,19 @@
    
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="38">
+              <!--image logo-->
+            <Image x:Name="Logo" 
+                   Margin="10,10,10,10" 
+                   HorizontalOptions="Center"
+                   WidthRequest="500"
+                   VerticalOptions="Start"/>
+
+            <CarouselView HorizontalOptions="Center">
+                
+            </CarouselView>
           
+           
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

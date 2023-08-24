@@ -15,6 +15,7 @@ namespace AppBancoDigital.View
         public TelaEntrada()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

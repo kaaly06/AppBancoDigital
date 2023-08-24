@@ -25,10 +25,10 @@
 
   <ItemGroup>
     <None Remove="Imagens\AbrirOlho.png" />
+    <None Remove="Imagens\Assistente.png" />
     <None Remove="Imagens\FecharOlho.png" />
     <None Remove="Imagens\Logo.png" />
     <None Remove="Imagens\PerfilUsuario.png" />
-    <None Remove="Imagens\ProximaPagina.png" />
     <None Remove="Imagens\SuperBoys.ttf" />
   </ItemGroup>
 
@@ -49,10 +49,10 @@
     <EmbeddedResource Include="Imagens\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Imagens\PerfilUsuario.png">
+    <EmbeddedResource Include="Imagens\Assistente.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Imagens\ProximaPagina.png">
+    <EmbeddedResource Include="Imagens\PerfilUsuario.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\SuperBoys.ttf">
@@ -68,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\CadastroCorrentista.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\TelaEntrada.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\TelaInicial.xaml">

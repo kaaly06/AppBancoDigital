@@ -11,6 +11,7 @@
                         Value="{OnPlatform Android='LilitaOne-Regular.ttf#LilitaOne-Regular'}"/>
             </Style>
 
+          
             <Style x:Key="FonteBoasVindas" TargetType="Label">
                 <Setter Property="FontFamily">
                     <Setter.Value>

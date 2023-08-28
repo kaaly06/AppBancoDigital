@@ -10,12 +10,22 @@
             <Image x:Name="Logo" 
                    Margin="10,10,10,10" 
                    HorizontalOptions="Center"
-                   WidthRequest="500"
+                   WidthRequest="600"
                    VerticalOptions="Start"/>
 
-            <CarouselView HorizontalOptions="Center">
-                
+            <CarouselView ItemsSource="{Binding Assistente}" BackgroundColor="Black">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Image Source="{Binding ImgUrl}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
             </CarouselView>
+           
           
            
 

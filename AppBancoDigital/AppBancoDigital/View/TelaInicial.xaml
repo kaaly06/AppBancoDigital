@@ -9,19 +9,46 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <ContentPage.Content >
-        <StackLayout VerticalOptions="Center" Margin="38">
+    <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" Margin="25,0,25,550">
 
-            <Frame x:Name="DadosUsuario" VerticalOptions="Start"
-                   Padding="55"
-                   HasShadow="True"                 
-                   CornerRadius="20">
-                <StackLayout>
-                    <Label Text="oi"
-                           FontSize=""/>
+            <Frame x:Name="DadosUsuario" 
+                   HeightRequest="95"
+                   VerticalOptions="Fill"
+                   Padding="10" 
+                   HasShadow="True"              
+                   CornerRadius="20"
+                   Margin="45">
+
+                <StackLayout BackgroundColor="White">
+
+                    <Label x:Name="NomeUsuario" Text="Nome:"                
+                          TextColor="#511024"
+                          HorizontalOptions="FillAndExpand"
+                          FontSize="20"
+                          FontAttributes="Bold"/>
+
+                    <ImageButton>
+
+                    </ImageButton>
+
+                    <Label x:Name="LabelSaldo" Text="Saldo em conta" 
+                           HeightRequest="20"
+                           Padding="2"/>
+
+                    <Label x:Name="SaldoUsuario" Text="R$0,00" 
+                           Margin="5"
+                           TextColor="#511024"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"/>
                 </StackLayout>
             </Frame>
 
+            <Grid ColumnDefinitions="*,*,*" BackgroundColor="Black"
+                  RowDefinitions="*">
+                
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
+        </ContentPage.Content>
+  
 </ContentPage>

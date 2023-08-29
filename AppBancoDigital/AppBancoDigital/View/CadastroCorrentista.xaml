@@ -80,8 +80,6 @@
             </Frame>
 
             <!--campo senha-->
-         
-
             <Frame x:Name="FrameSenha" 
                    Padding="10"
                    Margin="0,10,0,10"
@@ -101,12 +99,16 @@
                             <behaviorPack:PasswordValidationBehavior />
                         </Entry.Behaviors>
                     </Entry>
+
+                    <ImageButton x:Name="btn_senha" 
+                                     BackgroundColor="Beige" 
+                                     Clicked="btn_MostrarSenha"
+                                     />
+
                 </StackLayout>
             </Frame>
 
             <!--campo confirmar senha-->
-           
-
             <Frame x:Name="FrameConfirmarSenha" 
                    Padding="10"
                    Margin="0,10,0,10"

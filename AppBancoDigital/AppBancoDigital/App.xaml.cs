@@ -15,7 +15,7 @@ namespace AppBancoDigital
          
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TelaInicial());
+            MainPage = new NavigationPage(new LoginCorrentista());
         }
 
         protected override void OnStart()

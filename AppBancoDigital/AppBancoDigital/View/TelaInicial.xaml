@@ -26,7 +26,8 @@
                           TextColor="#511024"
                           HorizontalOptions="FillAndExpand"
                           FontSize="20"
-                          FontAttributes="Bold"/>
+                          FontAttributes="Bold"
+                           />
 
                     <ImageButton>
 
@@ -41,7 +42,18 @@
                            TextColor="#511024"
                            FontAttributes="Bold"
                            HorizontalOptions="Start"/>
+
+
+                    <ImageButton x:Name="btn_saldo"
+                                 Clicked="btn_MostrarSaldo"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="EndAndExpand"
+                                 Margin="0,0,0,0"
+                                 >
+                        
+                    </ImageButton>
                 </StackLayout>
+
             </Frame>
 
             <Grid ColumnDefinitions="*,*,*" BackgroundColor="Black"

@@ -18,7 +18,8 @@ namespace AppBancoDigital.View
 
 		{
 			InitializeComponent ();
-			NavigationPage.SetHasNavigationBar(this, false);	
+			NavigationPage.SetHasNavigationBar(this, false);
+			btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho");
 		}
 
         private async void Button_Clicked_cadastrar(object sender, EventArgs e)
@@ -47,6 +48,21 @@ namespace AppBancoDigital.View
 			{
 				Console.WriteLine(ex.StackTrace);
 				await DisplayAlert("Ops!", ex.Message, "OK");
+            }
+        }
+
+        private void btn_MostrarSenha(object sender, EventArgs e)
+        {
+			if (txt_senha.IsPassword == true)
+			{
+				txt_senha.IsPassword = false;
+				btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
+			}
+			else
+			{
+                txt_senha.IsPassword = true;
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
+
             }
         }
     }

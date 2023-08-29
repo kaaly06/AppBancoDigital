@@ -7,7 +7,7 @@ namespace AppBancoDigital.Model
 {
     public class Correntista
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string nome { get; set; }
         public string email { get; set; }   
         public string CPF { get; set; }

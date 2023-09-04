@@ -26,7 +26,7 @@ namespace AppBancoDigital.View
         {
           try
 			{
-				Model.Correntista c = await DataServiceCorrentista.CorrentistaSalvar(new Model.Correntista
+				Model.Correntista c = await DataServiceCorrentista.save(new Model.Correntista
 					{
                     nome = txt_nome.Text,
                     senha = txt_senha.Text,

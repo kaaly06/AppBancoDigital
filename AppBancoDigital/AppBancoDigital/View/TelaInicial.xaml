@@ -18,7 +18,7 @@
                    Padding="10" 
                    HasShadow="True"              
                    CornerRadius="20"
-                   Margin="45">
+                   Margin="35,0,45,0">
 
                 <StackLayout BackgroundColor="White">
 
@@ -28,10 +28,6 @@
                           FontSize="20"
                           FontAttributes="Bold"
                            />
-
-                    <ImageButton>
-
-                    </ImageButton>
 
                     <Label x:Name="LabelSaldo" Text="Saldo em conta" 
                            HeightRequest="20"
@@ -43,14 +39,13 @@
                            FontAttributes="Bold"
                            HorizontalOptions="Start"/>
 
-
                     <ImageButton x:Name="btn_saldo"
                                  Clicked="btn_MostrarSaldo"
-                                 VerticalOptions="Center"
-                                 HorizontalOptions="EndAndExpand"
-                                 Margin="0,0,0,0"
-                                 >
-                        
+                                 WidthRequest="10"
+                                 HeightRequest="25"
+                                 Padding="0"
+                                 
+                                 Margin="35,0,25,35">
                     </ImageButton>
                 </StackLayout>
 

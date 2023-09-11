@@ -29,7 +29,7 @@
     <None Remove="Imagens\FecharOlho.png" />
     <None Remove="Imagens\logo-remove %282%29.png" />
     <None Remove="Imagens\Logo.png" />
-    <None Remove="Imagens\SuperBoys.ttf" />
+    <None Remove="Imagens\Voltar.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,7 +55,7 @@
     <EmbeddedResource Include="Imagens\Assistente.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Imagens\SuperBoys.ttf">
+    <EmbeddedResource Include="Imagens\Voltar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

@@ -10,39 +10,67 @@
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-    
+
     <ContentPage.Content>
         
         <StackLayout  VerticalOptions="Center" Margin="38">
 
-            <Label Text="Informe seus dados para cadastro" Style="{StaticResource LabelCampos}"
-                   Margin="10"/>
+
+            <ImageButton x:Name="btn_voltar"
+                         BackgroundColor="Transparent"
+                         Clicked="btn_voltar_Clicked"
+                         HeightRequest="20"
+                         WidthRequest="20"
+                         Margin="-300,0,0,10"/>
+
+            <Label Text="Boas-vindas!" Style="{StaticResource LabelCampos}"
+                   FontSize="20"
+                   TextColor="White"
+                   Margin="10,-35,15,20" HorizontalOptions="Center"/>
 
             <!--campo nome-->
-           
+            <Label Text="Nome"
+                   Margin="10,0,0,-15"
+                   FontSize="16"
+                   TextColor="Black"/>
+            
             <Frame x:Name="FrameNome"
                    Padding="10"
                    Margin="0,15,0,15"
-                   CornerRadius="20"
+                   CornerRadius="15"
                    WidthRequest="10"
-                   HeightRequest="40" >
-
+                   HeightRequest="40"
+                   BackgroundColor="White">
+               
                 <StackLayout Orientation="Horizontal">
-                    <Entry x:Name="txt_nome" Placeholder="Nome"
+                    <Entry x:Name="txt_nome" Placeholder="Digite seu nome completo"
                            TabIndex="0"
                            HorizontalOptions="FillAndExpand"
-                           BackgroundColor="#ffff"
                            TextTransform="Lowercase"
                            CursorPosition="5">
                     </Entry>
                 </StackLayout>
             </Frame>
               
+            <!--data de nascimento-->
+            <Frame x:Name="FrameData_Nasc"
+                   Padding="10"
+                   Margin="0,15,0,15"
+                   CornerRadius="15"
+                   WidthRequest="10"
+                   HeightRequest="40">
+
+                <StackLayout Orientation="Horizontal">
+                    <DatePicker x:Name="dtcpk_data_nasc"
+                   HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+
             <!--campo cpf-->
             <Frame x:Name="FrameCpf" 
                    Padding="10"
                    Margin="0,10,0,10"
-                   CornerRadius="20"
+                   CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40">
 
@@ -64,7 +92,7 @@
             <Frame x:Name="FrameEmail" 
                    Padding="10"
                    Margin="0,10,0,10"
-                   CornerRadius="20"
+                   CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40">
 
@@ -83,7 +111,7 @@
             <Frame x:Name="FrameSenha" 
                    Padding="10"
                    Margin="0,10,0,10"
-                   CornerRadius="20"
+                   CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40">
 
@@ -112,7 +140,7 @@
             <Frame x:Name="FrameConfirmarSenha" 
                    Padding="10"
                    Margin="0,10,0,10"
-                   CornerRadius="20"
+                   CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40">
 
@@ -133,6 +161,7 @@
                 </StackLayout>
             </Frame>
 
+            
             <Label x:Name="lbl_erro" Text="" Style="{StaticResource LabelErros}"/>
 
             <Button Text="Cadastrar" Clicked="Button_Clicked_cadastrar" Style="{StaticResource BotaoCadastrar}"/>

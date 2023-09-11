@@ -20,6 +20,7 @@ namespace AppBancoDigital.View
 			InitializeComponent ();
 			NavigationPage.SetHasNavigationBar(this, false);
 			btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho");
+			btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
 		}
 
         private async void Button_Clicked_cadastrar(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace AppBancoDigital.View
 				Model.Correntista c = await DataServiceCorrentista.save(new Model.Correntista
 					{
                     nome = txt_nome.Text,
+					data_nasc = dtcpk_data_nasc.Date,
                     senha = txt_senha.Text,
                     email = txt_email.Text,
                     CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
@@ -64,6 +66,11 @@ namespace AppBancoDigital.View
                 btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
 
             }
+        }
+
+        private void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.LoginCorrentista());
         }
     }
 }

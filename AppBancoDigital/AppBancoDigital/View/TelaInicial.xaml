@@ -13,13 +13,21 @@
 
         <StackLayout VerticalOptions="Center" Margin="25,0,25,550">
 
+            <ImageButton x:Name="btnSeta"
+                         BackgroundColor="Transparent"
+                         Clicked="Seta_Clicked"
+                         HeightRequest="20"
+                         WidthRequest="20"
+                         Margin="-300,0,0,10"/>
+                
+            
             <Frame x:Name="DadosUsuario" 
                    HeightRequest="95"
                    VerticalOptions="Fill"
                    Padding="10" 
                    HasShadow="True"              
                    CornerRadius="20"
-                   Margin="35,0,45,0"
+                   Margin="35,0,45,-40"
                    BackgroundColor="White">
 
                 <StackLayout>
@@ -43,37 +51,31 @@
 
 
                     <Label x:Name="LabelSaldo" Text="Saldo em conta"
-                           FontFamily="Montsrrat Classic"
                            Margin="5,10,130,-15"
                            HeightRequest="25"                    
                            Padding="0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label x:Name="SaldoUsuario" Text="R$0,00"
+                        <Label x:Name="txt_SaldoUsuario" Text="R$0,00"
                            FontSize="15"
                            Padding="7"
                            TextColor="#511024"
                            FontAttributes="Bold"
-                           HorizontalOptions="Start"/>
+                           HorizontalOptions="Start"
+                             />
                     </StackLayout>
 
                 </StackLayout>
             </Frame>
 
-               <StackLayout Orientation="Horizontal"
-            <Grid VerticalOptions="CenterAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="55" />
-                    <ColumnDefinition Width="10" />
-                </Grid.ColumnDefinitions>
-
-                <BoxView BackgroundColor="Blue" Grid.Row="0" 
-                         Margin="0,0,0,0"
-                         />
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*,*"
+                  Margin="20" 
+                  HorizontalOptions="Center">
+                <ImageButton>
+                    <!--colocar imagem-->
+                </ImageButton>
             </Grid>
+
 
         </StackLayout>
     </ContentPage.Content>

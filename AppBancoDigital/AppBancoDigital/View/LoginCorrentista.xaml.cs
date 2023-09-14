@@ -41,7 +41,7 @@ namespace AppBancoDigital.View
             {
                 try
                 {
-                    Model.Correntista c = await DataServiceCorrentista.Entrar(new Model.Correntista
+                    Correntista c = await DataServiceCorrentista.Entrar(new Correntista
                     {
                         senha = txt_senha.Text,
                         CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)

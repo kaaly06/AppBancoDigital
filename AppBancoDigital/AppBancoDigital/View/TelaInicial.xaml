@@ -10,7 +10,8 @@
     </ContentPage.Background>
 
     <ContentPage.Content>
-            <StackLayout VerticalOptions="Center" Margin="25,0,25,550">
+
+        <StackLayout VerticalOptions="Center" Margin="25,0,25,550">
 
             <Frame x:Name="DadosUsuario" 
                    HeightRequest="95"
@@ -18,44 +19,62 @@
                    Padding="10" 
                    HasShadow="True"              
                    CornerRadius="20"
-                   Margin="35,0,45,0">
+                   Margin="35,0,45,0"
+                   BackgroundColor="White">
 
-                <StackLayout BackgroundColor="White">
+                <StackLayout>
 
-                    <Label x:Name="NomeUsuario" Text="Nome:"                
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="NomeUsuario" Text="Nome"                
                           TextColor="#511024"
                           HorizontalOptions="FillAndExpand"
-                          FontSize="20"
+                          FontSize="17"
                           FontAttributes="Bold"
-                           />
+                          Margin="6,6,0,10"/>
 
-                    <Label x:Name="LabelSaldo" Text="Saldo em conta" 
-                           HeightRequest="20"
-                           Padding="2"/>
+                        <ImageButton x:Name="btn_saldo"
+                                 Clicked="btn_MostrarSaldo"
+                                 WidthRequest="20"
+                                 HeightRequest="10"                             
+                                 VerticalOptions="FillAndExpand"
+                                 Margin="0,4,15,10"
+                                 BackgroundColor="Transparent"/>
+                    </StackLayout>
 
-                    <Label x:Name="SaldoUsuario" Text="R$0,00" 
-                           Margin="5"
+
+                    <Label x:Name="LabelSaldo" Text="Saldo em conta"
+                           FontFamily="Montsrrat Classic"
+                           Margin="5,10,130,-15"
+                           HeightRequest="25"                    
+                           Padding="0"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="SaldoUsuario" Text="R$0,00"
+                           FontSize="15"
+                           Padding="7"
                            TextColor="#511024"
                            FontAttributes="Bold"
                            HorizontalOptions="Start"/>
+                    </StackLayout>
 
-                    <ImageButton x:Name="btn_saldo"
-                                 Clicked="btn_MostrarSaldo"
-                                 WidthRequest="10"
-                                 HeightRequest="25"
-                                 Padding="0"
-                                 
-                                 Margin="35,0,25,35">
-                    </ImageButton>
                 </StackLayout>
-
             </Frame>
 
-            <Grid ColumnDefinitions="*,*,*" BackgroundColor="Black"
-                  RowDefinitions="*">
-                
+               <StackLayout Orientation="Horizontal"
+            <Grid VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="Blue" Grid.Row="0" 
+                         Margin="0,0,0,0"
+                         />
             </Grid>
+
         </StackLayout>
-        </ContentPage.Content>
-  
+    </ContentPage.Content>
 </ContentPage>

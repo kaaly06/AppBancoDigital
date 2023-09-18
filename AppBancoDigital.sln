@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBancoDigital.Android", "AppBancoDigital\AppBancoDigital.Android\AppBancoDigital.Android.csproj", "{537B134B-4CED-45CA-9D13-3A8AEB8CBB2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBancoDigital", "AppBancoDigital\AppBancoDigital\AppBancoDigital.csproj", "{55A734D8-4F54-4418-BCAE-5F10D407882D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppBancoDigital", "AppBancoDigital\AppBancoDigital\AppBancoDigital.csproj", "{55A734D8-4F54-4418-BCAE-5F10D407882D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -99,7 +99,7 @@
             <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_email" Keyboard="Email" Placeholder="Email "
+                    <Entry x:Name="txt_email" Placeholder="Email"
                            TabIndex="2"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#ffff">

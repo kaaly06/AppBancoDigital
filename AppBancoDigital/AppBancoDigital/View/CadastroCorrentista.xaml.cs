@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -51,6 +53,8 @@ namespace AppBancoDigital.View
 				Console.WriteLine(ex.StackTrace);
 				await DisplayAlert("Ops!", ex.Message, "OK");
             }
+
+			
         }
 
         private void btn_MostrarSenha(object sender, EventArgs e)

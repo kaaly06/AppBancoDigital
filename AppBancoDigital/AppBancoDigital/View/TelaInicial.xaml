@@ -51,12 +51,12 @@
 
 
                     <Label x:Name="LabelSaldo" Text="Saldo em conta"
-                           Margin="5,10,130,-15"
+                           Margin="5,10,130,-15" 
                            HeightRequest="25"                    
                            Padding="0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label x:Name="txt_SaldoUsuario" Text="R$0,00"
+                        <Label x:Name="txt_SaldoUsuario" Text="R$ " 
                            FontSize="15"
                            Padding="7"
                            TextColor="#511024"

@@ -25,21 +25,21 @@ namespace AppBancoDigital.View
             //Console.WriteLine("_____________________FIM CONTAS_____________________________");
 
 
-            double saldo_contas = App.DadosCorrentista.rows_contas.Sum(i => i.saldo);
-
-            txt_SaldoUsuario.Text = saldo_contas.ToString();
+         
         }
 
         private void btn_MostrarSaldo(object sender, EventArgs e)
         {
-            if (txt_SaldoUsuario.IsVisible == true) 
+            double saldo_contas = App.DadosCorrentista.rows_contas.Sum(i => i.saldo);
+
+            if (txt_SaldoUsuario.Text == "R$ " ) 
             {
-                txt_SaldoUsuario.IsVisible = false;
+                txt_SaldoUsuario.Text = "R" + saldo_contas.ToString("C");
                 btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
             }
             else
             {
-                txt_SaldoUsuario.IsVisible = true;
+                txt_SaldoUsuario.Text = "R$ ";
                 btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
             }
         }

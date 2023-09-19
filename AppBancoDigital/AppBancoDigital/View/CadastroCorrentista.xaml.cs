@@ -21,9 +21,15 @@ namespace AppBancoDigital.View
 		{
 			InitializeComponent ();
 			NavigationPage.SetHasNavigationBar(this, false);
-			btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho");
+            dtcpk_data_nasc.MaximumDate = DateTime.Now.AddYears(-17);
+            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho");
 			btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
-		}
+
+			//var editor = new Editor { Keyboard = Keyboard.Email};
+
+            var editor = new Editor();
+            editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeWord);
+        }
 
         private async void Button_Clicked_cadastrar(object sender, EventArgs e)
         {

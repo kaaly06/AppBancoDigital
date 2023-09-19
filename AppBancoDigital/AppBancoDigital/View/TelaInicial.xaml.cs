@@ -19,7 +19,7 @@ namespace AppBancoDigital.View
             InitializeComponent();
             btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
             btnSeta.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
-
+            btn_transf.Source = ImageSource.FromResource("AppBancoDigital.Imagens.BtnTransf.png");
             //Console.WriteLine("_____________________CONTAS_____________________________");
             //Console.WriteLine(App.DadosCorrentista.rows_contas.Count);
             //Console.WriteLine("_____________________FIM CONTAS_____________________________");
@@ -32,21 +32,26 @@ namespace AppBancoDigital.View
         {
             double saldo_contas = App.DadosCorrentista.rows_contas.Sum(i => i.saldo);
 
-            if (txt_SaldoUsuario.Text == "R$ " ) 
+            if (txt_SaldoUsuario.Text == "R$ ⎯⎯⎯⎯") 
             {
                 txt_SaldoUsuario.Text = "R" + saldo_contas.ToString("C");
-                btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
+                btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
             }
             else
-            {
-                txt_SaldoUsuario.Text = "R$ ";
-                btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
+            { 
+                txt_SaldoUsuario.Text = "R$ ⎯⎯⎯⎯";
+                btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
             }
         }
 
         private void Seta_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new View.LoginCorrentista());
+        }
+
+        private void btn_transf_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

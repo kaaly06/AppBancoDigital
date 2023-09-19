@@ -26,6 +26,10 @@
   <ItemGroup>
     <None Remove="Imagens\AbrirOlho.png" />
     <None Remove="Imagens\Assistente.png" />
+    <None Remove="Imagens\BtnCartao.png" />
+    <None Remove="Imagens\BtnInvest.png" />
+    <None Remove="Imagens\BtnPagar.png" />
+    <None Remove="Imagens\BtnTransf.png" />
     <None Remove="Imagens\FecharOlho.png" />
     <None Remove="Imagens\logo-remove %282%29.png" />
     <None Remove="Imagens\Logo.png" />
@@ -41,6 +45,18 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Imagens\AbrirOlho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\BtnCartao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\BtnInvest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\BtnPagar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\BtnTransf.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\FecharOlho.png">

@@ -56,7 +56,7 @@
                            Padding="0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label x:Name="txt_SaldoUsuario" Text="R$ " 
+                        <Label x:Name="txt_SaldoUsuario" Text="R$ ⎯⎯⎯⎯" 
                            FontSize="15"
                            Padding="7"
                            TextColor="#511024"
@@ -71,8 +71,12 @@
             <Grid RowDefinitions="*,*" ColumnDefinitions="*,*"
                   Margin="20" 
                   HorizontalOptions="Center">
-                <ImageButton>
-                    <!--colocar imagem-->
+                <ImageButton x:Name="btn_transf"
+                             Clicked="btn_transf_Clicked"
+                             Margin="0,0,0,0"
+                             WidthRequest="1"
+                             HeightRequest="1">
+                  
                 </ImageButton>
             </Grid>
 

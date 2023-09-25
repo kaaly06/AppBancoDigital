@@ -1,0 +1,9 @@
+Vermelho Bradesco: CC092F
+Usado no Gradiente: B81570
+Preto: 000000
+------------------------------------------------
+coisas para fazer:
+colocar os botões de cartão, tranferência,etc.
+validar email e cpf
+mostrar/chamar nome do correstista
+fazer a parte do pix

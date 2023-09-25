@@ -3,24 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.TelaInicial">
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+        <LinearGradientBrush StartPoint="0.6,1" EndPoint="0.5,0">
             <GradientStop Color="#AD4E83" Offset="0.1"/>
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-
     <ContentPage.Content>
 
-        <StackLayout VerticalOptions="Center" Margin="25,0,25,550">
+        <StackLayout VerticalOptions="FillAndExpand"  Margin="25,40,25,40">
 
-            <ImageButton x:Name="btnSeta"
+            <ImageButton x:Name="btnSeta" 
                          BackgroundColor="Transparent"
                          Clicked="Seta_Clicked"
                          HeightRequest="20"
                          WidthRequest="20"
-                         Margin="-300,0,0,10"/>
-                
-            
+                         Margin="-320,0,5,10"/>
+
             <Frame x:Name="DadosUsuario" 
                    HeightRequest="95"
                    VerticalOptions="Fill"
@@ -64,22 +62,21 @@
                            HorizontalOptions="Start"
                              />
                     </StackLayout>
-
                 </StackLayout>
             </Frame>
 
-            <Grid RowDefinitions="*,*" ColumnDefinitions="*,*"
-                  Margin="20" 
-                  HorizontalOptions="Center">
-                <ImageButton x:Name="btn_transf"
-                             Clicked="btn_transf_Clicked"
-                             Margin="0,0,0,0"
-                             WidthRequest="1"
-                             HeightRequest="1">
-                  
-                </ImageButton>
-            </Grid>
+          
+            <ImageButton x:Name="btn_transf"
+                         BackgroundColor="Transparent"
+                          Clicked="btn_transf_Clicked"
+                          Margin="0,100,165,0">
+            </ImageButton>
 
+            <ImageButton x:Name="btn_pagar"
+                         BackgroundColor="Transparent"                     
+                         Clicked="btn_pagar_Clicked"          
+                         Margin="0,20,165,0">
+            </ImageButton>
 
         </StackLayout>
     </ContentPage.Content>

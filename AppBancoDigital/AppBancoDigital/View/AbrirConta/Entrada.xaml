@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.AbrirConta.Entrada"
+             BackgroundColor="#F9D8D9">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+
+            <Image x:Name="Logo" 
+                   BackgroundColor="Transparent"
+                   Margin="0,-50,0,0"/>
+
+            <Label Text="Banco Digital" 
+                   TextColor="#511024" 
+                   HorizontalOptions="Center"
+                   Margin="50,-82,0,0"
+                   FontAttributes="none"/>
+
+
+            <ScrollView Orientation="Horizontal" >
+                <StackLayout Orientation="Horizontal" Margin="25,70,25,0">
+                    <StackLayout  WidthRequest="300" HeightRequest="300">
+                        <Image x:Name="Assistente1"
+                                 HeightRequest="400"
+                                 Margin="15,-45,15,0"/>
+                    </StackLayout>
+                    <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
+                    <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <!-- Text="Olá! eu sou a Susy, a sua Bank Assistente."-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

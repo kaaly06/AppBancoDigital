@@ -12,11 +12,8 @@
 
   <ItemGroup>
     <Compile Remove="Dados\**" />
-    <Compile Remove="View\NovaPasta\**" />
     <EmbeddedResource Remove="Dados\**" />
-    <EmbeddedResource Remove="View\NovaPasta\**" />
     <None Remove="Dados\**" />
-    <None Remove="View\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,7 +28,7 @@
     <None Remove="Imagens\BtnPagar.png" />
     <None Remove="Imagens\BtnTransf.png" />
     <None Remove="Imagens\FecharOlho.png" />
-    <None Remove="Imagens\logo-remove %282%29.png" />
+    <None Remove="Imagens\Logo-remove.png" />
     <None Remove="Imagens\Logo.png" />
     <None Remove="Imagens\Voltar.png" />
   </ItemGroup>
@@ -46,6 +43,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Imagens\AbrirOlho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\Assistente.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\BtnCartao.png">
@@ -63,13 +63,10 @@
     <EmbeddedResource Include="Imagens\FecharOlho.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Imagens\logo-remove (2).png">
+    <EmbeddedResource Include="Imagens\Logo-remove.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\Logo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Imagens\Assistente.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\Voltar.png">
@@ -79,6 +76,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\AbrirConta\Entrada.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\CadastroCorrentista.xaml">

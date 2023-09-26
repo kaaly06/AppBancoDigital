@@ -14,8 +14,8 @@ namespace AppBancoDigital
         {
          
             InitializeComponent();
-
-            MainPage = new NavigationPage(new LoginCorrentista());
+            NavigationPage.SetHasNavigationBar(this, false);
+            MainPage = new NavigationPage(new View.AbrirConta.Entrada());
         }
 
         protected override void OnStart()

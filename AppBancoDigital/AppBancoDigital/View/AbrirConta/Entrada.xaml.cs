@@ -19,5 +19,10 @@ namespace AppBancoDigital.View.AbrirConta
             Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo-remove.png");
             Assistente1.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Assistente.png");
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

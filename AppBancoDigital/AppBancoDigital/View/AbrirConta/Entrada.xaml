@@ -17,22 +17,32 @@
                    FontAttributes="none"/>
 
 
-            <ScrollView Orientation="Horizontal" BackgroundColor="Aquamarine">
-                <StackLayout Orientation="Horizontal" Margin="25,-45,25,0">
-                    <StackLayout  WidthRequest="350" HeightRequest="200">
+            <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,30,0,0">
+                <StackLayout Orientation="Horizontal" Margin="20,-60,25,0">
+                    <StackLayout  WidthRequest="350"
+                                  HeightRequest="200">
                         <Image x:Name="Assistente1"
-                                 HeightRequest="350"
-                                 Aspect="AspectFit"
-                                 VerticalOptions="CenterAndExpand"/>
-                        <Label Text="Olá! eu sou a Susy, a sua Bank Assistente." BackgroundColor="red"
-                                Margin="0,-50,0,0"/>
+                                 HeightRequest="330"
+                                 VerticalOptions="CenterAndExpand"
+                                 BackgroundColor="Transparent"/>
+                        <Label Text="Olá! eu sou a Susy, a sua Bank                               
+                                 Assistente."
+                                Margin="0,-80,15,50"
+                                HorizontalTextAlignment="Center"
+                                TextColor="Black"/>
 
                     </StackLayout>
                     <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
                     <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
                 </StackLayout>
             </ScrollView>
-           
+
+            <Button Clicked="Button_Clicked" Style="{StaticResource BotaoEntradaC}"
+                    Text="Abrir conta"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

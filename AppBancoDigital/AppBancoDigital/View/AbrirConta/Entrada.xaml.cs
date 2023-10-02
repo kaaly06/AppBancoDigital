@@ -20,7 +20,12 @@ namespace AppBancoDigital.View.AbrirConta
             Assistente1.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Assistente.png");
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Button_Abrir(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Criar(object sender, EventArgs e)
         {
 
         }

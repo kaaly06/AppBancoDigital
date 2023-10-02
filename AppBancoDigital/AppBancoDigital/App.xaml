@@ -29,21 +29,16 @@
             </Style>
             
             <!--botão rosa-->
-            <Style x:Key="BotaoCadastrar" TargetType="Button">
+            <Style x:Key="BotaoAbrirConta" TargetType="Button">
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="CornerRadius" Value="10"/>
                 <Setter Property="BackgroundColor" Value="#8D455B"/>
-                <Setter Property="Padding" Value="5"/>
-                <Setter Property="Margin" Value="15"/>
             </Style>
 
-            <!--botão rosa-->
-            <Style x:Key="BotaoEntradaC" TargetType="Button">
-                <Setter Property="TextColor" Value="White"/>
-                <Setter Property="CornerRadius" Value="15"/>
-                <Setter Property="BackgroundColor" Value="#8D455B"/>
-                <Setter Property="Padding" Value="10"/>
-                <Setter Property="Margin" Value="50,0,50,0"/>
+            <Style x:Key="BotaoCriarConta" TargetType="Button">
+                <Setter Property="TextColor" Value="#8D455B"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="White"/>
             </Style>
 
             <!--texto de erros-->

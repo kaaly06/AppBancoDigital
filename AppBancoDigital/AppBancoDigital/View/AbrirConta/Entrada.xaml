@@ -17,32 +17,45 @@
                    FontAttributes="none"/>
 
 
-            <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,30,0,0">
+            <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,40,0,0">
                 <StackLayout Orientation="Horizontal" Margin="20,-60,25,0">
+                    
                     <StackLayout  WidthRequest="350"
-                                  HeightRequest="200">
+                                  HeightRequest="250">
+                        
                         <Image x:Name="Assistente1"
-                                 HeightRequest="330"
+                                 HeightRequest="345"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="Transparent"/>
+
                         <Label Text="Olá! eu sou a Susy, a sua Bank                               
                                  Assistente."
-                                Margin="0,-80,15,50"
+                                Margin="0,-85,15,50"
                                 HorizontalTextAlignment="Center"
                                 TextColor="Black"/>
-
                     </StackLayout>
+                    
                     <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
                     <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
                 </StackLayout>
             </ScrollView>
 
-            <Button Clicked="Button_Clicked" Style="{StaticResource BotaoEntradaC}"
+            <Button Clicked="Button_Abrir" Style="{StaticResource BotaoAbrirConta}"
                     Text="Abrir conta"
                     TextTransform="None"
                     FontAttributes="Bold"
                     FontSize="20"
-                    VerticalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand"
+                    Padding="5"
+                    Margin="50,85,50,-55"/>
+            
+            <Button Clicked="Button_Criar" Style="{StaticResource BotaoCriarConta}"
+                    Text="Criar Conta"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Padding="5"
+                    Margin="38,-15,38,55"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,36 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
-             x:Class="AppBancoDigital.View.LoginCorrentista">
+             x:Class="AppBancoDigital.View.LoginCorrentista"
+             BackgroundColor="#F9F8F8">
 
-    <ContentPage.Background>
+    <!--ContentPage.Background
         <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
             <GradientStop Color="#AD4E83" Offset="0.1"/>
             <GradientStop Color="#801637" Offset="0.5"/>
         </LinearGradientBrush>
-    </ContentPage.Background>
+      ContentPage.Background-->
 
     <ContentPage.Content>
         <StackLayout Padding="10" VerticalOptions="Center">
             <!--logo-->
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
+            <Image x:Name="Logo" Margin="0,-50,0,0" HorizontalOptions="Center" WidthRequest="150"/>
+
+            <Label Text="Banco Digital" 
+                   TextColor="#511024" 
+                   HorizontalOptions="Center"
+                   Margin="50,-82,0,0"
+                   FontAttributes="none"/>
             <!--Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"-->
             <!--Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"-->
 
-            <Label
+            <!--Label
                 Text="Banco Inter" Style="{StaticResource Logo}" 
                 HorizontalOptions="Center"
                 FontSize="55" 
-                TextColor="White"
-                />
+                TextColor="White"-->
 
-
-            <Label
-                Margin="15"
-               Text="BEM-VINDO(A)"
+            <StackLayout Margin="0,150,0,0">
+                <Label
+               Margin="0,5,0,0"
+               Text="Olá, informe seu CPF e senha para entrar na sua conta"
                HorizontalOptions="Center"
-               FontAttributes="Bold, Italic"
-               TextColor="#F9D8D9" Style="{ StaticResource FonteBoasVindas}"/>
+               TextColor="Black"/>
+            </StackLayout>
+            
 
             <!--frame + scrollview (esquece)-->
              

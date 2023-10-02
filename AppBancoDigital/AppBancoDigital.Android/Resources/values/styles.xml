@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
+	<!--fazendo splash screen
+	<style name="Theme.Splash" parent="android:Theme">
+		<item name="android:windowBackgroud">AppBancoDigital/Imagens/Logo-remove.png</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="colorPrimaryDark">#313131</item>
+	<style-->
 	
 	<style name="MainTheme" parent="MainTheme.Base">
     <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->

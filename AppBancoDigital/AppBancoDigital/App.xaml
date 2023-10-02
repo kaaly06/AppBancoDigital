@@ -38,7 +38,7 @@
             <Style x:Key="BotaoCriarConta" TargetType="Button">
                 <Setter Property="TextColor" Value="#8D455B"/>
                 <Setter Property="CornerRadius" Value="10"/>
-                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#8D455B"/>
             </Style>
 
             <!--texto de erros-->

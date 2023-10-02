@@ -17,26 +17,27 @@
                    FontAttributes="none"/>
 
 
-            <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,40,0,0">
-                <StackLayout Orientation="Horizontal" Margin="20,-60,25,0">
+            <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,40,0,0"
+                        HorizontalScrollBarVisibility="Always">
+                <StackLayout Orientation="Horizontal" Margin="25,-60,25,0" >
                     
-                    <StackLayout  WidthRequest="350"
-                                  HeightRequest="250">
+                    <StackLayout  WidthRequest="300"
+                                  HeightRequest="300">
                         
                         <Image x:Name="Assistente1"
-                                 HeightRequest="345"
+                                 HeightRequest="360"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="Transparent"/>
 
-                        <Label Text="Olá! eu sou a Susy, a sua Bank                               
-                                 Assistente."
-                                Margin="0,-85,15,50"
+                        <Label Text="Olá! eu sou a Susy, a sua Bank Assistente."
+                                Margin="15,-95,15,0"
                                 HorizontalTextAlignment="Center"
-                                TextColor="Black"/>
+                                TextColor="Black"
+                                FontSize="14"/>
                     </StackLayout>
-                    
-                    <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
-                    <StackLayout Background="red" WidthRequest="300" HeightRequest="300"></StackLayout>
+                
+
+                    <StackLayout  WidthRequest="300" HeightRequest="300"></StackLayout>
                 </StackLayout>
             </ScrollView>
 
@@ -49,13 +50,16 @@
                     Padding="5"
                     Margin="50,85,50,-55"/>
             
-            <Button Clicked="Button_Criar" Style="{StaticResource BotaoCriarConta}"
+            <Button Clicked="Button_Criar" x:Name="btn_criarconta"
+                    Style="{StaticResource BotaoCriarConta}"
                     Text="Criar Conta"
                     TextTransform="None"
                     FontAttributes="Bold"
                     FontSize="20"
-                    Padding="5"
-                    Margin="38,-15,38,55"/>
+                    Padding="2"
+                    Margin="38,-15,38,55"
+                    BorderColor="#8D455B"
+                    BorderWidth="2"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

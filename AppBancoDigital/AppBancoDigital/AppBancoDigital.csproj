@@ -81,7 +81,7 @@
     <EmbeddedResource Update="View\AbrirConta\Entrada.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\CadastroCorrentista.xaml">
+    <EmbeddedResource Update="View\Acesso\Cadastro2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pix\EnviarPix.xaml">
@@ -109,7 +109,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\LoginCorrentista.xaml.cs">
+    <Compile Update="View\Acesso\CadastroCorrentista.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="View\Acesso\LoginCorrentista.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>

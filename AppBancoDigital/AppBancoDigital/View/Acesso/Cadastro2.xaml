@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Acesso.Cadastro2"
+              xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!--email-->
+            <Frame x:Name="FrameEmail" 
+                   Padding="10"
+                   Margin="0,10,0,10"
+                   CornerRadius="15"
+                   WidthRequest="10"
+                   HeightRequest="40">
+
+                <StackLayout Orientation="Horizontal">
+
+
+                    <Entry x:Name="txt_email" Keyboard="Email" Placeholder="Email"
+                           TabIndex="2"
+                           HorizontalOptions="FillAndExpand" 
+                           BackgroundColor="#c8c8c8">
+                    </Entry>
+                </StackLayout>
+            </Frame>
+
+            <!--campo senha-->
+            <Frame x:Name="FrameSenha" 
+        Padding="10"
+        Margin="0,10,0,10"
+        CornerRadius="15"
+        WidthRequest="10"
+        HeightRequest="40">
+
+                <StackLayout Orientation="Horizontal">
+
+
+                    <Entry x:Name="txt_senha" Placeholder="Senha"
+                           TabIndex="3"
+                           HorizontalOptions="FillAndExpand" 
+                           BackgroundColor="#c8c8c8"
+                           IsPassword="True">
+                        <Entry.Behaviors>
+                            <behaviorPack:PasswordValidationBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <ImageButton x:Name="btn_senha" 
+                          BackgroundColor="Beige" 
+                          Clicked="btn_senha_Clicked"/>
+
+                </StackLayout>
+            </Frame>
+
+            <!--campo confirmar senha-->
+            <Frame x:Name="FrameConfirmarSenha" 
+                   Padding="10"
+                   Margin="0,10,0,10"
+                   CornerRadius="15"
+                   WidthRequest="10"
+                   HeightRequest="40"
+                   BackgroundColor="#c8c8c8">
+
+                <StackLayout Orientation="Horizontal">
+
+
+                    <Entry x:Name="txt_conf_senha" Placeholder="Confirmar Senha"
+               TabIndex="4"
+               HorizontalOptions="FillAndExpand" 
+               BackgroundColor="#c8c8c8"                           
+               IsPassword="True">
+
+                        <!--esconde a senha-->
+                        <Entry.Behaviors>
+                            <behaviorPack:PasswordValidationBehavior />
+                            <behaviorPack:CompareValidationBehavior BindingContext="{x:Reference txt_senha}" Text="{Binding Text}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </Frame>
+
+
+            <Button Clicked="btn_Cadastrar_Clicked" x:Name="btn_criarconta"
+                    Style="{StaticResource BotaoCriarConta}"
+                    Text="Cadastrar"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Padding="2"
+                    Margin="38,-15,38,55"
+                    BorderColor="#8D455B"
+                    BorderWidth="2"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

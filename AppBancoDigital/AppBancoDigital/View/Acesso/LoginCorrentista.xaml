@@ -14,16 +14,15 @@
 
     <ContentPage.Content>
         <StackLayout Padding="10" VerticalOptions="Center">
-            <!--logo-->
+
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
 
             <ImageButton x:Name="btnvoltar" 
-              BackgroundColor="Transparent"
-              Clicked="btnVoltar_Clicked"
-              HeightRequest="20"
-              WidthRequest="20"
-              Margin="-320,0,5,15"/>
-
+                         Clicked="btnVoltar_Clicked"
+                         HeightRequest="22"
+                         BackgroundColor="Transparent"
+                         Margin="-325,-45,0,35"/> 
+            
             <Image x:Name="Logo" Margin="0,-100,0,0"  WidthRequest="150"/>
 
             <Label Text="Banco Digital" 
@@ -31,7 +30,6 @@
                    HorizontalOptions="Center"
                    Margin="50,-82,0,0"
                    FontAttributes="none"/>
-            <!--Image x:Name="Logo" Margin="10,10,10,10" HorizontalOptions="Start" WidthRequest="45"-->
             <!--Image x:Name="Usuario" Margin="20,50,10,10" HorizontalOptions="Center" WidthRequest="120"-->
 
             <!--Label
@@ -47,7 +45,7 @@
                      na sua conta"
                      HorizontalOptions="Center"
                      TextColor="Black"
-                     FontSize="14"/>
+                     FontSize="15"/>
             </StackLayout>
             
 
@@ -111,7 +109,7 @@
                                 Clicked="btn_login_Clicked"
                                 CornerRadius="12"
                                 Margin="35,15,35,25"
-                                BackgroundColor="#511024"
+                                BackgroundColor="#8D455B"
                                 TextTransform="None"/>
             </StackLayout>
         </StackLayout>

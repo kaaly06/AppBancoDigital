@@ -24,6 +24,7 @@ namespace AppBancoDigital.View
             //btn_login.BackgroundColor = Color.FromRgba(255, 255, 255, 50);
             //btn_cadastrar.BackgroundColor = Color.FromRgba(255,255,255,50);
             Logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Logo-remove.png");
+            btnvoltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
             //Usuario.Source = ImageSource.FromResource("AppBancoDigital.Imagens.PerfilUsuario.png");
             //logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.SuperBoys.ttf");         
         }
@@ -73,10 +74,9 @@ namespace AppBancoDigital.View
             }
         }
 
-        private void btn_cadastrar_Clicked(object sender, EventArgs e)
+        private void btnVoltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.CadastroCorrentista());
-
+            Navigation.PushAsync(new View.AbrirConta.Entrada());
         }
     }
 }

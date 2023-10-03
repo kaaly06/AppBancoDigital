@@ -18,22 +18,16 @@
 
 
             <ScrollView Orientation="Horizontal" VerticalOptions="Center" Margin="0,40,0,0"
-                        HorizontalScrollBarVisibility="Always">
+                        HorizontalScrollBarVisibility="Default">
                 <StackLayout Orientation="Horizontal" Margin="25,-60,25,0" >
                     
                     <StackLayout  WidthRequest="300"
                                   HeightRequest="300">
-                        
+
                         <Image x:Name="Assistente1"
-                                 HeightRequest="360"
+                                 HeightRequest="400"
                                  VerticalOptions="CenterAndExpand"
                                  BackgroundColor="Transparent"/>
-
-                        <Label Text="Olá! eu sou a Susy, a sua Bank Assistente."
-                                Margin="15,-95,15,0"
-                                HorizontalTextAlignment="Center"
-                                TextColor="Black"
-                                FontSize="14"/>
                     </StackLayout>
                 
 

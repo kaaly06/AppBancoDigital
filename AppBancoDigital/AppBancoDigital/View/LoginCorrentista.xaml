@@ -16,7 +16,15 @@
         <StackLayout Padding="10" VerticalOptions="Center">
             <!--logo-->
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
-            <Image x:Name="Logo" Margin="0,-50,0,0" HorizontalOptions="Center" WidthRequest="150"/>
+
+            <ImageButton x:Name="btnvoltar" 
+              BackgroundColor="Transparent"
+              Clicked="btnVoltar_Clicked"
+              HeightRequest="20"
+              WidthRequest="20"
+              Margin="-320,0,5,15"/>
+
+            <Image x:Name="Logo" Margin="0,-100,0,0"  WidthRequest="150"/>
 
             <Label Text="Banco Digital" 
                    TextColor="#511024" 
@@ -34,10 +42,12 @@
 
             <StackLayout Margin="0,150,0,0">
                 <Label
-               Margin="0,5,0,0"
-               Text="Olá, informe seu CPF e senha para entrar na sua conta"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+                     Margin="0,50,0,10"
+                     Text="Olá, informe seu CPF e senha para entrar &#10; 
+                     na sua conta"
+                     HorizontalOptions="Center"
+                     TextColor="Black"
+                     FontSize="14"/>
             </StackLayout>
             
 
@@ -45,19 +55,23 @@
              
             <!--frame/campo cpf-->
             
-            <StackLayout Margin="20,50,30,20">
+            <StackLayout Margin="20,35,30,0">
+
+                <Label Text="CPF"
+                       Margin="10,0,0,0" 
+                       TextColor="Black"/>
                 
-                <Frame CornerRadius="15" x:Name="FrameCpf" Padding="10"
-                           WidthRequest="10"
+                <Frame CornerRadius="12" x:Name="FrameCpf" Padding="7" BackgroundColor="#c8c8c8"
+                           WidthRequest="12"
                            HeightRequest="40"
-                           Margin="0,0,0,0">
+                           Margin="20,0,20,15">
 
                     <StackLayout Orientation="Horizontal">
 
-                        <Entry x:Name="txt_cpf" Placeholder="CPF"                             
+                        <Entry x:Name="txt_cpf" Placeholder="Digite seu CPF"                             
                                TabIndex="0"
                                HorizontalOptions="FillAndExpand" 
-                               BackgroundColor="#ffff"
+                               BackgroundColor="#c8c8c8" 
                                CursorPosition="5">
                             <Entry.Behaviors>
                                 <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
@@ -67,18 +81,22 @@
                 </Frame>
                 
 
-                <!--frame/campo senha-->    
+                <!--campo senha-->
+
+                <Label Text="Senha"
+                       Margin="10,0,0,0" 
+                       TextColor="Black"/>
                 
-                <Frame CornerRadius="15" x:Name="FrameSenha" Padding="10" 
-                           WidthRequest="10"
+                <Frame CornerRadius="12" x:Name="FrameSenha" Padding="7" 
+                           WidthRequest="12"
                            HeightRequest="40"
-                            Margin="0,10,0,0"
-                       >
+                           Margin="20,0,20,0"
+                           BackgroundColor="#c8c8c8">
                     <StackLayout Orientation="Horizontal">
 
-                        <Entry x:Name="txt_senha" Placeholder="Senha"
+                        <Entry x:Name="txt_senha" Placeholder="Digite uma senha"
                                HorizontalOptions="FillAndExpand" 
-                               BackgroundColor="#ffff" 
+                               BackgroundColor="#c8c8c8" 
                                IsPassword="True" 
                                TabIndex="1"/>
                     </StackLayout>
@@ -86,27 +104,15 @@
 
                 <Label x:Name="lbl_erro" Text="" Style="{StaticResource LabelErros}"/>
 
-                <!--botões de login/cadastrar-->
+                <!--botões de login-->
                 <Button x:Name="btn_login" 
                                 Text="Entrar"
                                 TextColor="#fff"
                                 Clicked="btn_login_Clicked"
-                                CornerRadius="10"
-                              Margin="25,15,0,25"
+                                CornerRadius="12"
+                                Margin="35,15,35,25"
                                 BackgroundColor="#511024"
-                                BorderColor="#841160"/>
-
-                <Label Text="Não tem conta?"
-                           TextColor="White"/>
-                <Button x:Name="btn_cadastrar" 
-                                Text="Se Cadastrar"
-                                TextColor="#511024"
-                                Clicked="btn_cadastrar_Clicked"
-                                CornerRadius="10"
-                                BorderColor="#F9D8D9"
-                                BackgroundColor="#F9D8D9"
-                              
-                                Margin="25,10,0,25"/>
+                                TextTransform="None"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

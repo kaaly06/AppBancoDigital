@@ -21,6 +21,8 @@ namespace AppBancoDigital.View
             btnSeta.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
             btn_transf.Source = ImageSource.FromResource("AppBancoDigital.Imagens.BtnTransf.png");
             btn_pagar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.BtnPagar.png");
+            btn_cartao.Source = ImageSource.FromResource("AppBancoDigital.Imagens.BtnCartao.png");
+            btn_invest .Source = ImageSource.FromResource("AppBancoDigital.Imagens.BtnInvest.png");
             //Console.WriteLine("_____________________CONTAS_____________________________");
             //Console.WriteLine(App.DadosCorrentista.rows_contas.Count);
             //Console.WriteLine("_____________________FIM CONTAS_____________________________");
@@ -56,6 +58,16 @@ namespace AppBancoDigital.View
         }
 
         private void btn_pagar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cartao_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_invest_Clicked(object sender, EventArgs e)
         {
 
         }

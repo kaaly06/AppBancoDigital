@@ -65,18 +65,24 @@
                 </StackLayout>
             </Frame>
 
-          
-            <ImageButton x:Name="btn_transf"
-                         BackgroundColor="Transparent"
-                          Clicked="btn_transf_Clicked"
-                          Margin="0,100,165,0">
-            </ImageButton>
+            <Grid Grid.ColumnDefinitions="*, *"  Grid.RowDefinitions ="*, *"
+                  Margin="0,95,0,0" 
+                  Padding="5"
+                  RowSpacing="25">
 
-            <ImageButton x:Name="btn_pagar"
-                         BackgroundColor="Transparent"                     
-                         Clicked="btn_pagar_Clicked"          
-                         Margin="0,20,165,0">
-            </ImageButton>
+                <ImageButton x:Name="btn_transf" Grid.Column="0" Grid.Row="0"
+                            Clicked="btn_transf_Clicked"/>
+
+                <ImageButton x:Name="btn_pagar" Grid.Column="0" Grid.Row="1"
+                           Clicked="btn_pagar_Clicked"/>
+
+                <ImageButton x:Name="btn_invest" Grid.Column="1" Grid.Row="0"
+                             Clicked="btn_invest_Clicked"/>
+
+                <ImageButton x:Name="btn_cartao" Grid.Column="1" Grid.Row="1"
+                             Clicked="btn_cartao_Clicked"/>
+
+            </Grid>
 
         </StackLayout>
     </ContentPage.Content>

@@ -16,7 +16,9 @@ namespace AppBancoDigital.View.Acesso
 		public Cadastro2 ()
 		{
 			InitializeComponent ();
-            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho");
+            NavigationPage.SetHasNavigationBar(this, false);
+            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
+            btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
         }
 
         private async void btn_Cadastrar_Clicked(object sender, EventArgs e)
@@ -61,6 +63,11 @@ namespace AppBancoDigital.View.Acesso
                 btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
 
             }
+        }
+
+        private void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

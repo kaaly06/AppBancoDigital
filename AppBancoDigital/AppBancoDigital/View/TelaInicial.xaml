@@ -12,14 +12,14 @@
 
         <StackLayout VerticalOptions="FillAndExpand"  Margin="25,40,25,40">
 
-            <ImageButton x:Name="btnSeta" 
+                <ImageButton x:Name="btnSeta" 
                          BackgroundColor="Transparent"
                          Clicked="Seta_Clicked"
                          HeightRequest="20"
                          WidthRequest="20"
                          Margin="-320,0,5,10"/>
 
-            <Frame x:Name="DadosUsuario" 
+                <Frame x:Name="DadosUsuario" 
                    HeightRequest="95"
                    VerticalOptions="Fill"
                    Padding="10" 
@@ -28,7 +28,7 @@
                    Margin="35,0,45,-40"
                    BackgroundColor="White">
 
-                <StackLayout>
+                    <StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="NomeUsuario" Text="Nome"                

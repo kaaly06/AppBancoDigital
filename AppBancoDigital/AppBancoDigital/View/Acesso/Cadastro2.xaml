@@ -4,20 +4,32 @@
              x:Class="AppBancoDigital.View.Acesso.Cadastro2"
               xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack">
     <ContentPage.Content>
-        <StackLayout>
-            
+        
+        <StackLayout  BackgroundColor="Aquamarine">
+
+            <StackLayout BackgroundColor="Black">
+                <ImageButton x:Name="btn_voltar"
+                         Clicked="btn_voltar_Clicked">
+                </ImageButton>
+
+                <Label Text="Etapa 2"/>
+            </StackLayout>
+          
+
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="Beige">
             <!--email-->
             <Frame x:Name="FrameEmail" 
                    Padding="10"
-                   Margin="0,10,0,10"
+                   Margin="20,10,20,10"
                    CornerRadius="15"
                    WidthRequest="10"
-                   HeightRequest="40">
+                   HeightRequest="40"
+                   BackgroundColor="#c8c8c8">
 
                 <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_email" Keyboard="Email" Placeholder="Email"
+                    <Entry x:Name="txt_email" Keyboard="Email" Placeholder="Digite seu email"
                            TabIndex="2"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#c8c8c8">
@@ -27,11 +39,12 @@
 
             <!--campo senha-->
             <Frame x:Name="FrameSenha" 
-        Padding="10"
-        Margin="0,10,0,10"
-        CornerRadius="15"
-        WidthRequest="10"
-        HeightRequest="40">
+                   Padding="10"
+                   Margin="20,10,20,10"
+                   CornerRadius="15"
+                   WidthRequest="10"
+                   HeightRequest="40"
+                   BackgroundColor="#c8c8c8">
 
                 <StackLayout Orientation="Horizontal">
 
@@ -47,7 +60,7 @@
                     </Entry>
 
                     <ImageButton x:Name="btn_senha" 
-                          BackgroundColor="Beige" 
+                          BackgroundColor="#c8c8c8" 
                           Clicked="btn_senha_Clicked"/>
 
                 </StackLayout>
@@ -56,7 +69,7 @@
             <!--campo confirmar senha-->
             <Frame x:Name="FrameConfirmarSenha" 
                    Padding="10"
-                   Margin="0,10,0,10"
+                   Margin="20,10,20,10"
                    CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40"
@@ -84,14 +97,14 @@
             <Button Clicked="btn_Cadastrar_Clicked" x:Name="btn_criarconta"
                     Style="{StaticResource BotaoCriarConta}"
                     Text="Cadastrar"
+                    TextColor="White"
                     TextTransform="None"
                     FontAttributes="Bold"
                     FontSize="20"
                     Padding="2"
-                    Margin="38,-15,38,55"
-                    BorderColor="#8D455B"
-                    BorderWidth="2"/>
+                    Margin="55,15,55,25"
+                    BackgroundColor="#8D455B"/>
         </StackLayout>
-        
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,4 +1,5 @@
 ﻿using AppBancoDigital.Service;
+using AppBancoDigital.View.AbrirConta;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using AppBancoDigital.View;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using AppBancoDigital.View.Acesso;
 
 namespace AppBancoDigital.View
 {
@@ -46,7 +48,7 @@ namespace AppBancoDigital.View
 				{
 					App.DadosCorrentista = c;
 
-					await Navigation.PushAsync(new LoginCorrentista());
+					await Navigation.PushAsync(new Cadastro2());
 				}
 				else
 					throw new Exception("Ocorreu um erro ao Salvar seu Cadastro.");
@@ -58,14 +60,14 @@ namespace AppBancoDigital.View
 			}			
         }    
 
-        private void btn_voltar_Clicked(object sender, EventArgs e)
+        private async void btn_voltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.Acesso.Cadastro2());
+            Navigation.PushAsync(new View.AbrirConta.Entrada());
         }
 
         private void btn_continuar_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.Acesso.Cadastro2());
         }
     }
 }

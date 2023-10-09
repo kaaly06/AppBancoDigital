@@ -3,9 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Pix.PixInicial">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Fazer Pix" Clicked="Button_Clicked_FazerPix" />
-            <Button Text="Receber Pix" Clicked="Button_Clicked_ReceberPix" />
+        <StackLayout Margin="0,25,0,25">
+            <StackLayout>
+                <Label Text="Pix" 
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       FontAttributes="Bold">
+                </Label>
+                <ImageButton x:Name="btnVoltar" 
+                         Clicked="btnvoltar_Clicked"
+                         HeightRequest="22"
+                         HorizontalOptions="StartAndExpand"
+                             Margin="15,-25,0,0"
+                         BackgroundColor="Transparent"/>
+                
+            </StackLayout>
+            <Button Text="Pagar" Clicked="Button_Clicked_FazerPix"
+                    BackgroundColor="Transparent"
+                    TextColor="#8D455B"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Padding="2"
+                    CornerRadius="9"
+                    BorderColor="#8D455B"
+                    BorderWidth="2"
+                    Margin="15,70,15,10"/>
+            
+            <Button Text="Receber Pix" Clicked="Button_Clicked_ReceberPix"
+                    BackgroundColor="Transparent"
+                    TextColor="#8D455B"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Padding="2"
+                    CornerRadius="9"
+                    BorderColor="#8D455B"
+                    BorderWidth="2"
+                    Margin="15,0,15,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

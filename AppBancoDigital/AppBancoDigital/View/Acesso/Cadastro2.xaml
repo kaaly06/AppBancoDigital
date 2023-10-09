@@ -4,23 +4,43 @@
              x:Class="AppBancoDigital.View.Acesso.Cadastro2"
               xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack">
     <ContentPage.Content>
-        
-        <StackLayout  BackgroundColor="Aquamarine">
 
-            <StackLayout BackgroundColor="Black">
-                <ImageButton x:Name="btn_voltar"
-                         Clicked="btn_voltar_Clicked">
+        <StackLayout  Margin="15,10,15,10">
+
+            <StackLayout  >
+                
+                <Label Text="Etapa 2"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+                
+                <ImageButton x:Name="btn_voltar" 
+                             Clicked="btn_voltar_Clicked"
+                             BackgroundColor="Transparent"
+                             HeightRequest="20"
+                             HorizontalOptions="Start"
+                             Margin="15,-25,15,0"
+                             >
                 </ImageButton>
-
-                <Label Text="Etapa 2"/>
             </StackLayout>
+
+            <Label Text="Agora, informe pra gente o seu email e crie &#10; uma senha para a sua conta"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0"
+                       TextColor="Black"/>
+            
           
 
-            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="Beige">
+            <StackLayout VerticalOptions="CenterAndExpand" >
             <!--email-->
-            <Frame x:Name="FrameEmail" 
+                <Label Text="Email" 
+                       TextColor="Black"
+                       Margin="35,0,0,0"/>
+                <Frame x:Name="FrameEmail" 
                    Padding="10"
-                   Margin="20,10,20,10"
+                   Margin="35,10,35,10"
                    CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40"
@@ -40,7 +60,7 @@
             <!--campo senha-->
             <Frame x:Name="FrameSenha" 
                    Padding="10"
-                   Margin="20,10,20,10"
+                   Margin="35,10,35,10"
                    CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40"
@@ -49,7 +69,7 @@
                 <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_senha" Placeholder="Senha"
+                    <Entry x:Name="txt_senha" Placeholder="Digite sua senha"
                            TabIndex="3"
                            HorizontalOptions="FillAndExpand" 
                            BackgroundColor="#c8c8c8"
@@ -59,17 +79,19 @@
                         </Entry.Behaviors>
                     </Entry>
 
-                    <ImageButton x:Name="btn_senha" 
-                          BackgroundColor="#c8c8c8" 
-                          Clicked="btn_senha_Clicked"/>
+                    <ImageButton x:Name="btn_senha"
+                                 BackgroundColor="Transparent"
+                                 Clicked="btn_senha_Clicked"
+                                 HeightRequest="25"/>
 
                 </StackLayout>
             </Frame>
+            
 
             <!--campo confirmar senha-->
             <Frame x:Name="FrameConfirmarSenha" 
                    Padding="10"
-                   Margin="20,10,20,10"
+                   Margin="35,10,35,10"
                    CornerRadius="15"
                    WidthRequest="10"
                    HeightRequest="40"
@@ -78,11 +100,12 @@
                 <StackLayout Orientation="Horizontal">
 
 
-                    <Entry x:Name="txt_conf_senha" Placeholder="Confirmar Senha"
-               TabIndex="4"
-               HorizontalOptions="FillAndExpand" 
-               BackgroundColor="#c8c8c8"                           
-               IsPassword="True">
+                    <Entry x:Name="txt_conf_senha" Placeholder="Digite sua senha novamente"
+                           TabIndex="4"
+                           HorizontalOptions="FillAndExpand" 
+                           BackgroundColor="#c8c8c8"                           
+                           IsPassword="True"
+                           >
 
                         <!--esconde a senha-->
                         <Entry.Behaviors>
@@ -90,21 +113,27 @@
                             <behaviorPack:CompareValidationBehavior BindingContext="{x:Reference txt_senha}" Text="{Binding Text}"/>
                         </Entry.Behaviors>
                     </Entry>
-                </StackLayout>
-            </Frame>
+                        <ImageButton x:Name="btn_Senha"
+                                     BackgroundColor="Red"
+                                     Clicked="btn_Senha_Clicked_1"
+                                     HeightRequest="25"/>
+                    </StackLayout>
+                    
+                </Frame>
 
 
-            <Button Clicked="btn_Cadastrar_Clicked" x:Name="btn_criarconta"
-                    Style="{StaticResource BotaoCriarConta}"
-                    Text="Cadastrar"
-                    TextColor="White"
-                    TextTransform="None"
-                    FontAttributes="Bold"
-                    FontSize="20"
-                    Padding="2"
-                    Margin="55,15,55,25"
-                    BackgroundColor="#8D455B"/>
-        </StackLayout>
+                <Button Clicked="btn_Cadastrar_Clicked" x:Name="btn_criarconta"
+                        Style="{StaticResource BotaoCriarConta}"
+                        Text="Cadastrar"
+                        TextColor="White"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Padding="2"
+                        Margin="55,25,55,25"
+                        BackgroundColor="#8D455B"/>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

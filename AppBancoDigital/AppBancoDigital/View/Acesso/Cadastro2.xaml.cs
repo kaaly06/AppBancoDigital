@@ -55,19 +55,34 @@ namespace AppBancoDigital.View.Acesso
             if (txt_senha.IsPassword == true)
             {
                 txt_senha.IsPassword = false;
-                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
             }
             else
             {
                 txt_senha.IsPassword = true;
-                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
 
             }
         }
 
         private void btn_voltar_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new CadastroCorrentista());
+        }
 
+        private void btn_Senha_Clicked_1(object sender, EventArgs e)
+        {
+            if (txt_senha.IsPassword == true)
+            {
+                txt_senha.IsPassword = false;
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
+            }
+            else
+            {
+                txt_senha.IsPassword = true;
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.Imagens.FecharOlho.png");
+
+            }
         }
     }
 }

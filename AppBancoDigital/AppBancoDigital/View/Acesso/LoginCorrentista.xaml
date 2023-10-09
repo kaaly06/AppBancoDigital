@@ -104,13 +104,14 @@
 
                 <!--botões de login-->
                 <Button x:Name="btn_login" 
-                                Text="Entrar"
-                                TextColor="#fff"
-                                Clicked="btn_login_Clicked"
-                                CornerRadius="12"
-                                Margin="35,15,35,25"
-                                BackgroundColor="#8D455B"
-                                TextTransform="None"/>
+                        Text="Entrar"
+                        TextColor="#fff"
+                        Clicked="btn_login_Clicked"
+                        CornerRadius="12"
+                        Margin="35,0,35,25"
+                        FontSize="17"
+                        BackgroundColor="#8D455B"
+                        TextTransform="None"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -76,7 +76,7 @@ namespace AppBancoDigital.View
 
         private void btnVoltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.AbrirConta.Entrada());
+            Navigation.PushAsync(new TelaInicial());
         }
     }
 }

@@ -21,7 +21,7 @@ namespace AppBancoDigital.View
 		public CadastroCorrentista ()
 
 		{
-			InitializeComponent ();
+			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
             dtcpk_data_nasc.MaximumDate = DateTime.Now.AddYears(-17);
 			btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");

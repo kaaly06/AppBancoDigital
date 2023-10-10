@@ -11,10 +11,10 @@ namespace AppBancoDigital.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TelaInicial : ContentPage
-    {
+    { 
         public TelaInicial()
 
-        {
+        { 
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             btn_saldo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.AbrirOlho.png");
@@ -33,6 +33,7 @@ namespace AppBancoDigital.View
 
         private void btn_MostrarSaldo(object sender, EventArgs e)
         {
+
             double saldo_contas = App.DadosCorrentista.rows_contas.Sum(i => i.saldo);
 
             if (txt_SaldoUsuario.Text == "R$ ⎯⎯⎯⎯") 

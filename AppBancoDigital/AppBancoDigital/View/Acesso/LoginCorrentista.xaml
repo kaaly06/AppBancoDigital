@@ -59,10 +59,11 @@
                        Margin="10,0,0,0" 
                        TextColor="Black"/>
                 
-                <Frame CornerRadius="12" x:Name="FrameCpf" Padding="7" BackgroundColor="#c8c8c8"
-                           WidthRequest="12"
-                           HeightRequest="40"
-                           Margin="20,0,20,15">
+                <Frame CornerRadius="12" x:Name="FrameCpf" Padding="7" 
+                       BackgroundColor="#c8c8c8"
+                       WidthRequest="12"
+                       HeightRequest="40"
+                       Margin="20,0,20,15">
 
                     <StackLayout Orientation="Horizontal">
 

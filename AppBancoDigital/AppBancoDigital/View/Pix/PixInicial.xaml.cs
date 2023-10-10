@@ -19,6 +19,9 @@ namespace AppBancoDigital.View.Pix
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent(); 
             btnVoltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
+            btnInterrogacao.Source = ImageSource.FromResource("AppBancoDigital.Imagens.interrogacao.png");
+            btnpagar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.pagar.png");
+            btnSetaDireita.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta_direita.png");
         }
 
         private void Button_Clicked_FazerPix(object sender, EventArgs e)
@@ -32,6 +35,11 @@ namespace AppBancoDigital.View.Pix
         }
 
         private void btnvoltar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInterrogacao_Clicked(object sender, EventArgs e)
         {
 
         }

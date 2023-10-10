@@ -4,32 +4,60 @@
              x:Class="AppBancoDigital.View.Pix.PixInicial">
     <ContentPage.Content>
         <StackLayout Margin="0,25,0,25">
-            <StackLayout>
+            <StackLayout >
                 <Label Text="Pix" 
                        FontSize="16"
                        HorizontalTextAlignment="Center"
                        TextColor="Black"
-                       FontAttributes="Bold">
+                       FontAttributes="Bold"
+                       Margin="0,5,0,0"
+                       FontFamily="Gill Sans, sans-serif">
                 </Label>
                 <ImageButton x:Name="btnVoltar" 
-                         Clicked="btnvoltar_Clicked"
-                         HeightRequest="22"
-                         HorizontalOptions="StartAndExpand"
+                             Clicked="btnvoltar_Clicked"
+                             HeightRequest="20"
+                             HorizontalOptions="StartAndExpand"
                              Margin="15,-25,0,0"
-                         BackgroundColor="Transparent"/>
-                
+                             BackgroundColor="Transparent"/>
+
+                <ImageButton x:Name="btnInterrogacao" 
+                             Clicked="btnInterrogacao_Clicked"
+                             HeightRequest="25"
+                             HorizontalOptions="End"
+                             Margin="0,-28,20,0"
+                             BackgroundColor="Transparent"/>
+
             </StackLayout>
-            <Button Text="Pagar" Clicked="Button_Clicked_FazerPix"
-                    BackgroundColor="Transparent"
-                    TextColor="#8D455B"
-                    TextTransform="None"
-                    FontAttributes="Bold"
-                    FontSize="16"
-                    Padding="2"
-                    CornerRadius="9"
-                    BorderColor="#8D455B"
-                    BorderWidth="2"
-                    Margin="15,70,15,10"/>
+            <Frame 
+                Margin="25,45,25,15"
+                HasShadow="True"
+                Padding="0"   
+                HeightRequest="45"
+                CornerRadius="8">
+                <StackLayout Padding="0" Margin="0">
+                    <Label Text="Pagar" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start" 
+                           Margin="55,13,0,0"
+                           TextColor="Black">
+                    </Label>
+
+
+                    <ImageButton x:Name="btnpagar" 
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="30"
+                                 HorizontalOptions="StartAndExpand"
+                                 Margin="15,-30,0,0"/>
+
+                    <ImageButton x:Name="btnSetaDireita" 
+                                 BackgroundColor="red"
+                                 HeightRequest="35"
+                                 HorizontalOptions="CenterAndExpand"
+                                 Margin="0,30,0,0"/>
+                </StackLayout>
+            </Frame>
+           
+
             
             <Button Text="Receber Pix" Clicked="Button_Clicked_ReceberPix"
                     BackgroundColor="Transparent"
@@ -42,6 +70,27 @@
                     BorderColor="#8D455B"
                     BorderWidth="2"
                     Margin="15,0,15,0"/>
+
+            <Frame VerticalOptions="CenterAndExpand"
+                   HasShadow="True"
+                   HeightRequest="45"
+                   CornerRadius="8"
+                   Margin="35"
+                   Padding="35">
+
+                <StackLayout>
+                    <Label Text="Cadastre &#10;sua chave"
+                     TextColor="#8D455B"
+                     HorizontalOptions="StartAndExpand"
+                     FontAttributes="Bold"
+                     FontSize="20"
+                     Margin="-30,0,0,0"/>
+
+                  
+
+                </StackLayout>
+               
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

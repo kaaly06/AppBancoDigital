@@ -20,8 +20,10 @@ namespace AppBancoDigital.View.Pix
             InitializeComponent(); 
             btnVoltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
             btnInterrogacao.Source = ImageSource.FromResource("AppBancoDigital.Imagens.interrogacao.png");
-            btnpagar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.pagar.png");
-            btnSetaDireita.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta_direita.png");
+            btnPagar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.pagar.png");
+            btnSetaD.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta-direita.png");
+            btnReceber.Source = ImageSource.FromResource("AppBancoDigital.Imagens.qrcode.png");
+            btnContinuar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta-direita.png");
         }
 
         private void Button_Clicked_FazerPix(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace AppBancoDigital.View.Pix
 
         private void btnvoltar_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new TelaInicial());
         }
 
         private void btnInterrogacao_Clicked(object sender, EventArgs e)

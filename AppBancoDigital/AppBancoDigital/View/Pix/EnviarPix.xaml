@@ -3,13 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Pix.EnviarPix">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Gerar QR CODE" Clicked="Button_Clicked" />
+        <StackLayout Margin="0,25,0,25">
+            <StackLayout >
+                <Label Text="Pagar com Pix" 
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Margin="0,5,0,0"
+                       FontFamily="Gill Sans, sans-serif">
+                </Label>
+                <ImageButton x:Name="btnvoltar" 
+                             Clicked="btnvoltar_Clicked"
+                             HeightRequest="20"
+                             HorizontalOptions="StartAndExpand"
+                             Margin="15,-25,0,0"
+                             BackgroundColor="Transparent"/>
+              
+            </StackLayout>
 
-            <Label Text="QR Code vai aparecer abaixo: " />
+            <StackLayout>
+                <Frame 
+                Margin="25,45,25,15"
+                HasShadow="True"
+                Padding="0"   
+                HeightRequest="45"
+                CornerRadius="8">
+                    <StackLayout Padding="0" Margin="0">
+                        <Label Text="QR code" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start" 
+                           Margin="50,13,0,0"
+                           TextColor="Black">
+                        </Label>
 
-            <Image x:Name="img_qrcode" />
+                        <ImageButton x:Name="qrcode" Clicked="Scanner"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="25"
+                                 Margin="15,-27,35,0"
+                                 HorizontalOptions="StartAndExpand">
 
+                        </ImageButton>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

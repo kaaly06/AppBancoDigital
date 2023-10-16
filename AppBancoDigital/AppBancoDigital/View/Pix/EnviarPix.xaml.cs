@@ -16,18 +16,20 @@ namespace AppBancoDigital.View.Pix
     {
         public EnviarPix()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            btnvoltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
+            qrcode.Source = ImageSource.FromResource("AppBancoDigital.Imagens.camera.png");
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Scanner(object sender, EventArgs e)
         {
-            string teste = "Chave da Transferência: tiago@tiago.blog.br ";
+            //fazerscanner
+        }
 
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(teste, QRCodeGenerator.ECCLevel.Q);
-            PngByteQRCode qRCode = new PngByteQRCode(qrCodeData);
-            byte[] qrCodeBytes = qRCode.GetGraphic(20);
-            img_qrcode.Source = ImageSource.FromStream(() => new MemoryStream(qrCodeBytes));
+        private void btnvoltar_Clicked(object sender, EventArgs e)
+        {
+            //Navigation.PushAsync(new TelaInicial());
         }
     }
 }

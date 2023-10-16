@@ -28,6 +28,7 @@
                              BackgroundColor="Transparent"/>
 
             </StackLayout>
+            
             <Frame 
                 Margin="25,45,25,15"
                 HasShadow="True"
@@ -43,33 +44,51 @@
                     </Label>
 
 
-                    <ImageButton x:Name="btnpagar" 
+                    <ImageButton x:Name="btnPagar" 
                                  BackgroundColor="Transparent"
                                  HeightRequest="30"
                                  HorizontalOptions="StartAndExpand"
                                  Margin="15,-30,0,0"/>
 
-                    <ImageButton x:Name="btnSetaDireita" 
-                                 BackgroundColor="red"
-                                 HeightRequest="35"
+                    <ImageButton x:Name="btnSetaD"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="20"
+                                 Margin="185,-33,-95,0"
                                  HorizontalOptions="CenterAndExpand"
-                                 Margin="0,30,0,0"/>
+                                 Clicked="Button_Clicked_FazerPix"/>
                 </StackLayout>
             </Frame>
-           
 
-            
-            <Button Text="Receber Pix" Clicked="Button_Clicked_ReceberPix"
-                    BackgroundColor="Transparent"
-                    TextColor="#8D455B"
-                    TextTransform="None"
-                    FontAttributes="Bold"
-                    FontSize="16"
-                    Padding="2"
-                    CornerRadius="9"
-                    BorderColor="#8D455B"
-                    BorderWidth="2"
-                    Margin="15,0,15,0"/>
+            <Frame
+                Margin="25,5,25,15"
+                HasShadow="True"
+                Padding="0"
+                HeightRequest="45"
+                CornerRadius="8">
+                
+                <StackLayout Padding="0" Margin="0">
+                    <Label Text="Receber" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start" 
+                           Margin="55,13,0,0"
+                           TextColor="Black">
+                    </Label>
+
+                    <ImageButton x:Name="btnReceber" 
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="23"
+                                 HorizontalOptions="StartAndExpand"
+                                 Margin="15,-28,0,0"/>
+
+                    <ImageButton x:Name="btnContinuar"
+                                 BackgroundColor="Transparent"
+                                 HorizontalOptions="CenterAndExpand"
+                                 HeightRequest="20"
+                                 Margin="95,-27,-185,0"
+                                 Clicked="Button_Clicked_ReceberPix"/>
+                </StackLayout>
+            </Frame>
+
 
             <Frame VerticalOptions="CenterAndExpand"
                    HasShadow="True"

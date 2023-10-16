@@ -27,6 +27,7 @@
     <None Remove="Imagens\BtnInvest.png" />
     <None Remove="Imagens\BtnPagar.png" />
     <None Remove="Imagens\BtnTransf.png" />
+    <None Remove="Imagens\camera.png" />
     <None Remove="Imagens\FecharOlho.png" />
     <None Remove="Imagens\interrogacao.png" />
     <None Remove="Imagens\Logo-remove.png" />
@@ -62,6 +63,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\BtnTransf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\camera.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\FecharOlho.png">

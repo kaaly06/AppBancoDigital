@@ -89,12 +89,19 @@
                 </StackLayout>
             </Frame>
 
+            <Label Text="Mais ações"
+                   Margin="28,15,0,0"
+                   TextColor="Black"
+                   FontAttributes="Bold">
+                
+            </Label>
+
 
             <Frame VerticalOptions="CenterAndExpand"
                    HasShadow="True"
-                   HeightRequest="45"
+                   HeightRequest="100"
                    CornerRadius="8"
-                   Margin="35"
+                   Margin="25,0,25,0"
                    Padding="35">
 
                 <StackLayout>
@@ -103,9 +110,29 @@
                      HorizontalOptions="StartAndExpand"
                      FontAttributes="Bold"
                      FontSize="20"
-                     Margin="-30,0,0,0"/>
+                     Margin="-25,-25,0,0"/>
 
-                  
+                    <Label Text="Receba e faça Pix a &#10;qualquer hora, sem custos"
+                           Margin="-25,0,0,0"/>
+
+                    <ImageButton x:Name="Assist"
+                                 HorizontalOptions="EndAndExpand"
+                                 Margin="0,-155,-45,0"
+                                 HeightRequest="255"
+                                 BackgroundColor="Transparent">
+                        
+                    </ImageButton>
+
+                    <Button x:Name="btn_Fchave"
+                            Text="Cadastrar"
+                            TextColor="#fff"
+                            CornerRadius="10" 
+                            FontSize="15"
+                            BackgroundColor="#AF6C84"
+                            TextTransform="None"
+                            Margin="-25,-98,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            HeightRequest="40"/>
 
                 </StackLayout>
                

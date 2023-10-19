@@ -24,6 +24,7 @@ namespace AppBancoDigital.View.Pix
             btnSetaD.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta-direita.png");
             btnReceber.Source = ImageSource.FromResource("AppBancoDigital.Imagens.qrcode.png");
             btnContinuar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.seta-direita.png");
+            Assist.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Assistente.png");
         }
 
         private void Button_Clicked_FazerPix(object sender, EventArgs e)

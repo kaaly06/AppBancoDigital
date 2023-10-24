@@ -16,7 +16,7 @@
                 <ImageButton x:Name="btnVoltar" 
                              Clicked="btnvoltar_Clicked"
                              HeightRequest="20"
-                             HorizontalOptions="StartAndExpand"
+                             HorizontalOptions="Start"
                              Margin="15,-25,0,0"
                              BackgroundColor="Transparent"/>
 

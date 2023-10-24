@@ -14,7 +14,15 @@ namespace AppBancoDigital.View.Pix
     {
         public ExibirPix()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            btnvoltar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.Voltar.png");
+            btnInfo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.info.png");
+        }
+
+        private void btnInfo_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,7 +34,7 @@ namespace AppBancoDigital.View.Pix
 
         private void Button_Clicked_ReceberPix(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.Pix.ExibirPix());
         }
 
         private void btnvoltar_Clicked(object sender, EventArgs e)

@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Pix.ExibirPix">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="0,25,0,25">
+            <StackLayout BackgroundColor="Aqua">
+                <Label Text="Pagar com Pix" 
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Margin="0,5,0,0"
+                FontFamily="Gill Sans, sans-serif">
+                </Label>
+                
+                <ImageButton x:Name="btnvoltar" 
+                      HeightRequest="20"
+                      HorizontalOptions="StartAndExpand"
+                      Margin="15,-25,0,0"
+                      BackgroundColor="Transparent"/>
+
+                <ImageButton x:Name="btnInfo" 
+                             HeightRequest="25"
+                             HorizontalOptions="EndAndExpand"
+                             Clicked="btnInfo_Clicked"
+                             BackgroundColor="Red"/>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,16 +19,15 @@
                              HorizontalOptions="StartAndExpand"
                              Margin="15,-25,0,0"
                              BackgroundColor="Transparent"/>
-              
             </StackLayout>
 
             <StackLayout>
                 <Frame 
-                Margin="25,45,25,15"
-                HasShadow="True"
-                Padding="0"   
-                HeightRequest="45"
-                CornerRadius="8">
+                    Margin="25,45,25,15"
+                    HasShadow="True"
+                    Padding="0"   
+                    HeightRequest="45"
+                    CornerRadius="8">
                     <StackLayout Padding="0" Margin="0">
                         <Label Text="QR code" 
                            FontAttributes="Bold"

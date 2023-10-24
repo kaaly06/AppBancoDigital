@@ -29,7 +29,7 @@ namespace AppBancoDigital.View.Pix
 
         private void btnvoltar_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new TelaInicial());
+            Navigation.PushAsync(new PixInicial());
         }
     }
 }

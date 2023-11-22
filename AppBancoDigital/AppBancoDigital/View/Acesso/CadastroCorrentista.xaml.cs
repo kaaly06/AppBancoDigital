@@ -38,9 +38,9 @@ namespace AppBancoDigital.View
 			{
 				Model.Correntista c = await DataServiceCorrentista.save(new Model.Correntista
 				{
-					nome = txt_nome.Text,
-					data_nasc = dtcpk_data_nasc.Date,
-					CPF = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
+					//nome = App.Globais._nome,
+					//data_nasc = App.Globais._dtcpk_data_nasc.Date,
+					//CPF = App.Globais._txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
 
 				});
 

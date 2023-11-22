@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AppBancoDigital.Model;
 using AppBancoDigital.View;
+using AppBancoDigital.View.Pix;
 
 namespace AppBancoDigital
 {

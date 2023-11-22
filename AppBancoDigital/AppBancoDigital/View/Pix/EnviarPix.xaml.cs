@@ -24,7 +24,7 @@ namespace AppBancoDigital.View.Pix
 
         private void Scanner(object sender, EventArgs e)
         {
-            //fazerscanner
+            Navigation.PushAsync(new LerQrCode());
         }
 
         private void btnvoltar_Clicked(object sender, EventArgs e)
